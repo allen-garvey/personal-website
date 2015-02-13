@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head><title>Shape Calculator</title>
+
+<meta name=viewport content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../styles/shape_calculator.css">
+<link rel="stylesheet" type="text/css" href="../styles/shapes.css">
+<script type="text/javascript" src='../scripts/select_shape.js'></script>
+<script type="text/javascript" src='../scripts/ajax_controller.js'></script>
+<script type="text/javascript" src='../scripts/validation.js'></script>
+
+</head>
+<body>
+<div id='main'>
+	<div id='title'><h1>Shape Calculator</h1></div>
+	<div id='content'>
+		<div id='shape_chooser_div'>
+			<div class='shape_container' onclick="select_shape(this), get_input_div('triangle')"><div class='triangle'></div></div>
+			<div class='shape_container' onclick="select_shape(this), get_input_div('cylinder')">
+				<div class='cylinder_main'></div>
+				<div class='cylinder_top'></div>
+			</div>
+			<div class='shape_container' onclick="select_shape(this), get_input_div('cylinder_composed')">
+				<div class='cylinder_main'></div>
+				<div class='cylinder_top'></div>
+			</div>
+			<div class='shape_container' onclick="select_shape(this), get_input_div('sphere')"><div class='sphere'></div></div>
+			<div class='shape_container' onclick="select_shape(this), get_input_div('sphere_composed')"><div class='sphere'></div></div>
+			<div class='shape_container' onclick="select_shape(this), get_input_div('triangle')"><div class='triangle'></div></div>
+			<div class='shape_container' onclick="select_shape(this), get_input_div('circle')"><div class='circle'></div></div>
+			<div class='shape_container' onclick="select_shape(this), get_input_div('rectangle')"><div class='square'></div></div>
+			<div class='shape_container' onclick="select_shape(this), get_input_div('triangle')"><div class='triangle'></div></div>
+			<div class='shape_container' onclick="select_shape(this), get_input_div('rectangle')"><div class='rectangle'></div></div>
+			<div class='shape_container' onclick="select_shape(this), get_input_div('triangular_prism')">
+				<div class='triangular_prism_top'></div>
+				<div class='triangular_prism_bottom'></div>
+			</div>
+			<div class='shape_container' onclick="select_shape(this), get_input_div('triangular_prism_composed')">
+				<div class='triangular_prism_top'></div>
+				<div class='triangular_prism_bottom'></div>
+			</div>
+			<div class='shape_container' onclick="select_shape(this), get_input_div('rectangular_prism')">
+				<div class='rectangular_prism_top'></div>
+				<div class='rectangular_prism_front'></div>
+				<div class='rectangular_prism_side'></div>
+			</div>
+			<div class='shape_container' onclick="select_shape(this), get_input_div('rectangular_prism_composed')">
+				<div class='rectangular_prism_top'></div>
+				<div class='rectangular_prism_front'></div>
+				<div class='rectangular_prism_side'></div>
+			</div>
+		</div>
+		<div id='input_div'>
+<!-- 			<input type='number' placeholder='Radius'>
+			<input type='number' placeholder='Radius'>
+			<input type='number' placeholder='Radius'> -->
+		</div>
+		<div id='calculation_results'></div>
+		<div id='button_div'><button id='calculate_button'>Calculate</button></div>
+	</div>
+
+
+
+
+</div>
+</body>
+</html>

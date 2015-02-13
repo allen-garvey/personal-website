@@ -1,0 +1,151 @@
+$screen_width: 850px;
+html{
+  height: 100%;
+}
+body{
+  font-family: Times,'Times New Roman', 'Droid Serif', serif;
+  font-size: 16px;
+  background-color: AntiqueWhite;
+  height: 100%;
+}
+%main_container{
+  max-width: $screen_width;
+  margin: 0 auto;
+}
+%reset{
+  padding:0;
+  margin: 0;
+}
+
+main{
+  @extend %main_container;
+  background-color:white;
+  min-height:100%;
+  padding: 15px;
+}
+nav{
+  @extend %main_container;
+  margin-bottom: 35px;
+  ul{
+    @extend %reset;
+    list-style-type: none;
+    overflow:hidden;
+  }
+  li{
+    @extend %reset;
+    display: inline;
+  }
+}
+%nav_item{
+  float:left;
+  border: 1px solid silver;
+  font-size: 200%;
+  border-collapse: collapse;
+}
+.nav_selected{
+  @extend %nav_item;
+  background-color: DodgerBlue;
+  a:link{
+    color: white;
+  }
+  a:visited{
+    color: silver;
+  }
+  a:active{
+    color:white;
+  }
+}
+
+.nav_deselected{
+  @extend %nav_item;
+  background-color:white;
+}
+
+%table_cell{
+  text-align: left;
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 15px 10px 15px 5px;
+}
+th{
+  @extend %table_cell;
+}
+td{
+  @extend %table_cell;
+  min-width: 100px;
+}
+table{
+  border-collapse: collapse;
+  padding: 0;
+  min-width: 100%;
+}
+footer{
+  padding: 5px 5px 0 0;
+  margin: 10px 0 0 0;
+}
+
+figure{
+  @extend %reset;
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+}
+main h1{
+  @extend %reset;
+  display: inline-block;
+  margin: 0 100px 10px 0;
+}
+
+dd{
+  display: inline;
+  margin: 10px 10px 0 0;
+}
+
+dl{
+  .price{
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .isbn{
+    font-size: .80em;
+  }
+}
+li a{
+  display: block;
+  padding:.5em;
+  margin-top: -1px;
+  margin-left: -1px;
+}
+
+select{
+  -webkit-appearance: menulist-button;
+  font-size: 1.2em;
+  min-width: 500px;
+}
+.form_control{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: $screen_width){
+  main h1{
+  margin: 0 0 10px 0;
+  }
+  select{
+    min-width: 0;
+    width: 100%;
+  }
+  nav{
+    li{
+      width:100%;
+    }
+  }
+  th, td{
+    min-width: 0;
+  }
+  figure{
+    display: block;
+    margin: 0;
+  }
+}

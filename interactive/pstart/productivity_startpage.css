@@ -1,0 +1,152 @@
+body{
+	font-size: 120%;
+	background: #c9c9c9 url('mountain.jpg') no-repeat;
+}
+#center{
+	margin: 0 auto;
+	max-width: 1300px;
+	text-align: center;
+}
+.menu_container{
+	float: left;
+	margin: 5px;
+}
+.menu_title{
+	font-family: futura, helvetica, 'helvetica neue', arial, sans-serif;
+	border-color: black;
+	border: solid;
+	padding: 10px;
+	min-width: 170px;
+	text-align: center;
+	opacity: .6;
+}
+.menu_title:hover{
+	opacity: 1;
+}
+.menu_title_clicked{
+	opacity: 1 !important;
+}
+#e_title{
+		/*border-color: #8c00ff;
+		color: #8c00ff;*/
+		border-color: #e16000;
+		color: #e16000;
+}
+
+#m_title{
+	border-color: #61be7c;
+	color: green;
+}
+#t_title{
+	border-color: #2738ff;
+	color: #5065ff;
+}
+#l_title{
+	border-color: #f4be7c;
+	/*color: #cda66b;*/
+	color: #f4be7c;
+}
+#c_title{
+	border-color: #2781ff;
+	color: #2739ff;
+}
+#r_title{
+	border-color: #d9787c;
+	color: #ff6575;
+}
+#x_title{
+	border-color: #d9bdde;
+	color: #a324ff;
+}
+#z_title{
+	border-color: #493764;
+	color: #49124c;
+}
+.menu_contents{
+	display: none;
+	padding: 10px;
+	min-width: 170px;
+	z-index: 100;
+	text-align: left;
+}
+.menu_contents_active{
+	display: block !important;
+
+}
+li{
+	padding: 10px;
+}
+a.heading{
+	text-decoration: none;
+}
+
+#quote_container_div{
+	color: black;
+	background: white;
+	display: inline-block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+}
+.quote_body{
+	text-align: left;
+	padding-left: 8%;
+	padding-right: 8%; 
+}
+#spacing_div{
+	width: 25%;
+	display: inline-block;
+}
+
+@media screen and (max-width:500px) {
+	.menu_container{
+		display: inline-block;
+		width:90%;
+		margin: 5px;
+	}
+
+	#center{
+		width: 100%;
+	}
+
+	.menu_title{
+  		width:100%;
+  		height: 80px;
+  		font-size: 200%;
+  	}
+  	.menu_title_clicked{
+  		width:100%;
+  		height: 80px;
+  		font-size: 200%;
+  	}
+  	.menu_contents{
+		font-size: 130%;
+	}
+  	li{
+		padding: 20px;
+		font-size: 120%;
+	}
+	#e_title{
+		border-color: red;
+		color: red;
+	}
+	.menu_title{
+		opacity: 1;
+	}
+	#quote_container_div{
+		width: 100%;
+		font-size: 130%;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.quote_body{
+	text-align: left;
+	padding-left: 0px;
+	padding-right: 0px; 
+	}
+
+	.quote_attribution{
+		text-align: left;
+	}
+}

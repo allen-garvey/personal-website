@@ -1,0 +1,90 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<xs:element name="bookmarks">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="bookmark-list" type="bookmarkListType" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="bookmarkListType">
+		<xs:sequence>
+			<xs:element name="title" type="nonEmptyString" minOccurs="1" maxOccurs="1" />
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="divider" type="dividerType" />
+				<xs:element name="a" type="aType" />
+			</xs:choice>
+		</xs:sequence>
+		<xs:attributeGroup ref="bookListAttributes" />
+		<xs:attributeGroup ref="sharedCommonAttributes" />
+	</xs:complexType>
+
+	<xs:complexType name="dividerType">
+		<xs:attributeGroup ref="sharedCommonAttributes" />
+		<xs:attributeGroup ref="sharedChildAttributes" />
+	</xs:complexType>
+
+	<xs:complexType name="aType">
+		<xs:simpleContent>
+			<xs:extension base="nonEmptyString">
+				<xs:attributeGroup ref="aAttributes" />
+				<xs:attributeGroup ref="sharedCommonAttributes" />
+				<xs:attributeGroup ref="sharedChildAttributes" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:attributeGroup name="sharedCommonAttributes">
+		<xs:attribute name="comment" type="xs:string" use="optional" />
+		<xs:attribute name="secure" type="xs:boolean" default="false" use="optional" />
+		<xs:attribute name="max-device-code" type="deviceRequiredCode" use="optional" default="100" />
+		<xs:attribute name="display" type="xs:boolean" default="true" use="optional" />
+	</xs:attributeGroup>
+
+	<xs:attributeGroup name="sharedChildAttributes">
+		<!-- min-device-code inherits from parent bookmark-list if not set -->
+		<xs:attribute name="min-device-code" type="deviceRequiredCode" use="optional" />
+	</xs:attributeGroup>
+
+	<xs:attributeGroup name="bookListAttributes">
+		<xs:attribute name="id" type="xs:ID" use="required" />
+		<xs:attribute name="title-color" type="colorType" use="optional" default="black" />
+		<xs:attribute name="min-device-code" type="deviceRequiredCode" use="required" />
+	</xs:attributeGroup>
+
+	<xs:attributeGroup name="aAttributes">
+		<xs:attribute name="href" type="xs:string" use="required" />
+	</xs:attributeGroup>
+
+	<xs:simpleType name="nonEmptyString">
+    	<xs:restriction base="xs:string">
+			<xs:pattern value="(\s*[^\s]\s*)+"></xs:pattern>
+    	</xs:restriction>
+    </xs:simpleType>
+
+    <!-- used to determine the css class used to display the color of the title -->
+    <xs:simpleType name="colorType">
+    	<xs:restriction base="xs:string">
+        	<xs:enumeration value="black" />
+        	<xs:enumeration value="white" />
+        	<xs:enumeration value="pink" />
+        	<xs:enumeration value="red" />
+        	<xs:enumeration value="orange" />
+        	<xs:enumeration value="yellow" />
+        	<xs:enumeration value="green" />
+        	<xs:enumeration value="blue" />
+        	<xs:enumeration value="dodgerBlue" />
+        	<xs:enumeration value="purple" />
+    	</xs:restriction>
+    </xs:simpleType>
+
+<!-- see min-max-device-code-readme.txt for explanation -->
+    <xs:simpleType name="deviceRequiredCode">
+    	<xs:restriction base="xs:nonNegativeInteger">
+        	<xs:minInclusive value="0" />
+        	<xs:maxInclusive value="100" />
+    	</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

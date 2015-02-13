@@ -1,0 +1,153 @@
+body {background-color:black;
+	color:white;
+	font-family: Helvetica, 'Helvetica Neue', Arial, 'Cambria', sans-serif;;
+	font-size: 30px;}
+
+.center2{
+	background: black;
+	position: relative;
+	margin:0 auto;
+	max-width:800px;
+	text-align: center;
+}
+
+.tile{
+	width: 100px;
+	height: 100px;
+	border-style:solid;
+	border-color:black;
+	border-width:15px;
+
+}
+
+.tile:hover{
+	border-color:#FFC0CB;
+}
+
+.deselected_tile{
+	width: 100px;
+	height: 100px;
+	border-style:solid;
+	border-color:black;
+	border-width:15px;
+}
+
+.feedback_tile{
+	background: gray;
+	color: white;
+	text-align: center;
+	width: 100px;
+	height: 100px;
+	border-style:solid;
+	border-color:black;
+	border-width:15px;
+	font-size: 90px;
+	font-family: 'Gill Sans', 'Futura', 'Helvetica Neue', Helvetica, Arial, 'Cambria', sans-serif;
+	font-weight: normal;
+}
+
+#buttons{
+	text-align: center;
+	border-style:solid;
+	border-color:black;
+	border-width:15px;
+	height:100px;
+	width: 100px;
+
+}
+
+
+
+
+tr.submit{
+	text-align: center;
+}
+td.submit{
+	text-align: center;
+	vertical-align: middle;
+}
+
+#submit_button:hover{
+	border-color:#FFC0CB;
+}
+
+#submit_button{
+	background:  #e8e8e8;
+	color: black;
+	text-align: center;
+	height:100px;
+	line-height: 100px;
+	width: 100px;
+	border-style:solid;
+	border-color:black;
+	border-width:15px;
+	font-size: 25px;
+	font-family: Helvetica, 'Helvetica Neue', Arial, 'Cambria', sans-serif;
+
+}
+#sound_button:hover{
+	border-color:#FFC0CB;
+}
+
+#sound_button{
+	background:  #e8e8e8;
+	color: black;
+	text-align: center;
+	height:100px;
+	line-height: 100px;
+	width: 100px;
+	border-style:solid;
+	border-color:black;
+	border-width:15px;
+	font-size: 25px;
+	font-family: Helvetica, 'Helvetica Neue', Arial, 'Cambria', sans-serif;
+
+}
+
+.spacer_cell{
+	color: white;
+	background: black;
+	height:100px;
+	width: 100px;
+	border-style:solid;
+	border-color:black;
+	border-width:15px;
+}
+
+#left, #right {
+background: gray;
+position: fixed;
+}
+#left, #right {
+	top: 0; bottom: 0;
+	width: 15px;
+	}
+	#left { left: 0; }
+	#right { right: 0; }
+
+a:hover{color:white;}
+a.title{
+	text-decoration: none;
+	font-size: 35px;
+	text-align: center;
+	}
+a:visited.title{color:white;}
+a:hover.title{color:gray;}
+
+.menu_box {
+  display: inline-block;
+  height: 1px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: center;
+}
+
+.title {
+	text-align:center;}
+
+
+
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app='PerfectPitch'>
+<head>
+	<meta charset="utf-8"/>
+    <title>Perfect Pitch Trainer</title>
+ 	<meta name="description" content="Perfect Pitch Trainer"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="scripts/angular.min.js" ></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+</head>
+<body>
+	<main ng-controller='GameController as gameCtlr'>
+		<header>Perfect Pitch Trainer</header>
+		<nav>
+			<a class="nav" href="#">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" enable-background="new 0 0 50 50" class="icon_left" ng-click="gameCtlr.playNote()"><path d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17-7.6 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z"/><path d="M20 33.7V16.3L35 25l-15 8.7zm2-14v10.5l9-5.3-9-5.2z"/></svg>
+			</a>
+			<a class="nav icon_center" href="#" ng-click="gameCtlr.newGame()">New</a>
+			<div class="icon_right" >
+			<span ng-show="gameCtlr.showAnswer" class="nav_animated"><a class="nav" href="#" ng-class="{'hidden':!gameCtlr.showAnswer}">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" enable-background="new 0 0 50 50" ng-click="!gameCtlr.showAnswer || gameCtlr.initRound()" ng-disabled="gameCtlr.showAnswer"><path d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17-7.6 17-17 17zm0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z"/><path d="M24.7 34.7l-1.4-1.4 8.3-8.3-8.3-8.3 1.4-1.4 9.7 9.7z"/><path d="M16 24h17v2H16z"/></svg>
+			</a></span></div>
+		</nav>
+		<div class="status">{{gameCtlr.showScore()}}</div>
+		<content>
+		<div class="results">
+			<div class="container" ng-show="gameCtlr.showAnswer">
+				<h1>{{gameCtlr.displayAnswer()}}</h1>
+				<p>Correct!</p>
+			</div>
+		</div>			
+			<div class="controls">
+				<button ng-class="{'button_clean':gameCtlr.button0 == 'clean' && !gameCtlr.showAnswer,'button_right':gameCtlr.button0 == true,'button_wrong':gameCtlr.button0 == false}" ng-model="gameCtlr.button0" ng-click ="gameCtlr.guess(0)">A</button>
+				
+				<button ng-class="{'button_clean':gameCtlr.button1 == 'clean' && !gameCtlr.showAnswer,'button_right':gameCtlr.button1 == true,'button_wrong':gameCtlr.button1 == false}" ng-model="gameCtlr.button1" ng-click ="gameCtlr.guess(1)">A#/Bb</button>
+				
+				<button ng-class="{'button_clean':gameCtlr.button2 == 'clean' && !gameCtlr.showAnswer,'button_right':gameCtlr.button2 == true,'button_wrong':gameCtlr.button2 == false}" ng-model="gameCtlr.button2" ng-click ="gameCtlr.guess(2)">B</button>
+				
+				<button ng-class="{'button_clean':gameCtlr.button3 == 'clean' && !gameCtlr.showAnswer,'button_right':gameCtlr.button3 == true,'button_wrong':gameCtlr.button3 == false}" ng-model="gameCtlr.button3" ng-click ="gameCtlr.guess(3)">C</button>
+				
+				<button ng-class="{'button_clean':gameCtlr.button4 == 'clean' && !gameCtlr.showAnswer,'button_right':gameCtlr.button4 == true,'button_wrong':gameCtlr.button4 == false}" ng-model="gameCtlr.button4" ng-click ="gameCtlr.guess(4)">C#/Db</button>
+				
+				<button ng-class="{'button_clean':gameCtlr.button5 == 'clean' && !gameCtlr.showAnswer,'button_right':gameCtlr.button5 == true,'button_wrong':gameCtlr.button5 == false}" ng-model="gameCtlr.button5" ng-click ="gameCtlr.guess(5)">D</button>
+				
+				<button ng-class="{'button_clean':gameCtlr.button6 == 'clean' && !gameCtlr.showAnswer,'button_right':gameCtlr.button6 == true,'button_wrong':gameCtlr.button6 == false}" ng-model="gameCtlr.button6" ng-click ="gameCtlr.guess(6)">D#/Eb</button>
+				
+				<button ng-class="{'button_clean':gameCtlr.button7 == 'clean' && !gameCtlr.showAnswer,'button_right':gameCtlr.button7 == true,'button_wrong':gameCtlr.button7 == false}" ng-model="gameCtlr.button7" ng-click ="gameCtlr.guess(7)">E</button>
+				
+				<button ng-class="{'button_clean':gameCtlr.button8 == 'clean' && !gameCtlr.showAnswer,'button_right':gameCtlr.button8 == true,'button_wrong':gameCtlr.button8 == false}" ng-model="gameCtlr.button8" ng-click ="gameCtlr.guess(8)">F</button>
+				
+				<button ng-class="{'button_clean':gameCtlr.button9 == 'clean' && !gameCtlr.showAnswer,'button_right':gameCtlr.button9 == true,'button_wrong':gameCtlr.button9 == false}" ng-model="gameCtlr.button9" ng-click ="gameCtlr.guess(9)">F#/Gb</button>
+				
+				<button ng-class="{'button_clean':gameCtlr.button10 == 'clean' && !gameCtlr.showAnswer,'button_right':gameCtlr.button10 == true,'button_wrong':gameCtlr.button10 == false}" ng-model="gameCtlr.button10" ng-click ="gameCtlr.guess(10)">G</button>
+				
+				<button ng-class="{'button_clean':gameCtlr.button11 == 'clean' && !gameCtlr.showAnswer,'button_right':gameCtlr.button11 == true,'button_wrong':gameCtlr.button11 == false}" ng-model="gameCtlr.button11" ng-click ="gameCtlr.guess(11)">G#/Ab</button>
+			</div>
+		</content>
+		<div class="toolbar"><a class="nav" href="#">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" enable-background="new 0 0 50 50" class="icon_left" ng-click="gameCtlr.toggleDifficulty('previous')"><path d="M27.3 34.7L17.6 25l9.7-9.7 1.4 1.4-8.3 8.3 8.3 8.3z"/></svg>
+			</a>
+			<div class="nav toolbar_center" >{{gameCtlr.difficulty.name}}</div>
+			<div class="icon_right">
+			<a class="nav" href="#">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" enable-background="new 0 0 50 50" ng-click="gameCtlr.toggleDifficulty('next')"><path d="M22.7 34.7l-1.4-1.4 8.3-8.3-8.3-8.3 1.4-1.4 9.7 9.7z"/></svg>
+			</a></div></div>
+	</main>
+
+</body>
+</html>

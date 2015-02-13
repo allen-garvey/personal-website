@@ -1,0 +1,149 @@
+.shape_container, .shape_container_selected, .shape_container_deselected{
+	padding: 5px;
+	border:2px solid transparent;
+	margin: 5px;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	text-align: center;
+}
+.shape_container_selected{
+	border:2px solid pink;
+	opacity: 1;
+}
+.shape_container_deselected{
+	opacity: .5;
+}
+.shape_container:hover, .shape_container_deselected:hover{
+	border:2px solid pink;
+}
+
+/*For an equilateral triangle the height is 86.6% of the width so (border-left-width + border-right-width) * 0.866 = border-bottom-width*/
+.triangle{
+	width: 0; 
+	height: 0; 
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	
+	border-bottom: 86.6px solid black;
+	margin: 0 auto;
+}
+
+.square{
+	width: 86.6px;
+	height: 86.6px;
+	background-color: black;
+	margin: 0 auto;
+}
+.rectangle{
+	width: 62px;
+	height: 86.6px;
+	background-color: black;
+	margin: 0 auto;
+}
+.circle{
+	height: 86.6px;
+	width: 86.6px;
+	border:1px solid black;
+	-moz-border-radius: 1000px;
+	-webkit-border-radius: 1000px;
+	border-radius: 1000px;
+	background-color: black;
+	margin: 0 auto;
+}
+
+.sphere {
+  display: block;
+  background: black;
+  border-radius: 50%;
+  height: 86.6px;
+  width: 86.6px;
+  margin: 0;
+  background: radial-gradient(circle at 30px 30px, red, #000);
+  margin: 0 auto;
+}
+
+.cylinder_main{
+	width: 70px;
+	height: 86.6px;
+	background: red;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+	/*background: radial-gradient(circle at 0px 0px, red, #000);*/
+	margin: 0 auto;
+}
+
+.cylinder_top{
+	position: relative;
+    top: -89px;
+    left: 15px;
+	width: 70px;
+	height: 35px;
+	background: black;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+	/*-ms-transform: translate(0px,-85px); /* IE 9 */*/
+   	/*-webkit-transform: translate(0px,-85px); /* Chrome, Safari, Opera */*/
+    /*transform: translate(0px,-85px);*/
+	margin: 0 auto;
+}
+
+.triangular_prism_top {
+	border: 50px solid transparent;
+	border-bottom: 20px solid red;
+	margin: 0 auto;
+	-ms-transform: translate(0px,-50px); /* IE 9 */
+   	-webkit-transform: translate(0px,-50px); /* Chrome, Safari, Opera */
+    transform: translate(0px,-50px);
+}
+.triangular_prism_bottom {
+	width: 99px;
+	height: 70px;
+	background-color: black;
+	-ms-transform: translate(0px,-50px); /* IE 9 */
+   	-webkit-transform: translate(0px,-50px); /* Chrome, Safari, Opera */
+    transform: translate(0px,-50px);
+	margin: 0 auto;
+}
+
+.rectangular_prism_front{
+	height: 60px;
+	width: 40px;
+	background: black;
+	margin: 0 auto;
+	-ms-transform: translate(-12px,0px); /* IE 9 */
+   	-webkit-transform: translate(-12px,0px); /* Chrome, Safari, Opera */
+    transform: translate(-12px,0px);
+}
+.rectangular_prism_top{
+	width: 40px;
+	height: 30px;
+	-ms-transform: skew(-40deg);
+	-webkit-transform: skew(-40deg) ;
+	-moz-transform: skew(-40deg);
+	-o-transform: skew(-40deg);
+
+
+	background: red;
+	margin: 0 auto;
+}
+.rectangular_prism_side{
+	width: 25px;
+	height: 60px;
+	position: relative;
+	left: 58px;
+	top: -75px;
+
+	-webkit-transform: skew(0deg, -50deg);
+	-moz-transform: skew(0deg, -50deg);
+	-o-transform: skew(0deg, -50deg);
+	background: red;
+
+}
+
+
+
+
+
