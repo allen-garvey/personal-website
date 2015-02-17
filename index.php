@@ -8,37 +8,35 @@
 <body>
 <div class='main'>
 	<header class='jumbotron'>
-		<h1 class='logo_text'>Allen Garvey</h1>
-		<p class='lead'>Software Developer, Designer, Musician</p>
+		<?php include(ROOT_PATH.'inc/navbar.php'); ?>
+		<div class='container main_brand'>
+			<h1 class='logo_text'>Allen Garvey</h1>
+			<p class='lead'>Software Developer, Designer, Musician</p>
+		</div>
 	</header>
 	<div class='jumbotron about'>
-	<div class='container about_me'>
-			<div class='row'>
-				<div class='col-sm-12'><h2>Me in 20 Seconds</h2></div>
-			</div>
+		<div class='container about_me'>
+			<h2>Hi, I&#8217;m Allen.</h2>
 			<div class='row'>
 				<div class='col-sm-4'>
-					<p>I'm a software developer, designer and musician. I believe in passionately following your dreams. I hope to do blank and blank. I've done blank and blank.</p>
+					<p>I&#8217;m a software developer, designer and musician. As far back as I can remember I&#8217;ve always been intensely curious, which leads me to never stop learning. I believe that if you do the work and put in the time for the things that you are most passionate about, good things will come to you.</p>
 				</div>
 				<div class='col-sm-4'>
-					<p>Some other stuff I believe in.</p>
+					<p>Some highlights so far: I&#8217;ve <strong>written an opera</strong> while completing a degree in music composition, performed professionally <strong>all over the world,</strong> changed track to study computer science, and have created all the illustrations and graphics on this site.</p>
 				</div>
 				<div class='col-sm-4'>
-					<div class='allen_pic'><img width='300px' src="<?= BASE_URL.'images/allen1.jpg'; ?>"/></div>
+					<div class='allen_pic'><img src="<?= BASE_URL.'images/allen1.jpg'; ?>" alt="Allen Garvey portrait illustration" /></div>
 				</div>
 			</div>
 		</div>
-		</div>
+	</div>
 	<main class='container'>
-		
-
-
 		<div class='row'>
 			<div class='col-sm-6'>
 				<div class='row'>
 					<div class='col-sm-6'>
-						<h3><a href="<?= BASE_URL.'code/' ?>">Code</a></h3>
-						<p>Some programs and websites I've made.</p>
+						<h3><a href="<?= CODE_URL; ?>">Code</a></h3>
+						<p>Some programs and websites I&#8217;ve made.</p>
 					</div>
 					<div class='col-sm-6'>
 						<?php include(ROOT_PATH.'images/evil-icons/ei-gear.svg'); ?>
@@ -48,7 +46,7 @@
 			<div class='col-sm-6'>
 				<div class='row'>
 					<div class='col-sm-6 col_top_buffer'>
-						<h3><a href="<?= BASE_URL.'artwork/' ?>">Artwork</a></h3>
+						<h3><a href="<?= ARTWORK_URL; ?>">Artwork</a></h3>
 						<p>Some of my artwork.</p>
 					</div>
 					<div class='col-sm-6'>
@@ -62,8 +60,8 @@
 			<div class='col-sm-6'>
 				<div class='row'>
 					<div class='col-sm-6'>
-						<h3><a href="<?= BASE_URL.'music/' ?>">Music</a></h3>
-						<p>Some music I've written.</p>
+						<h3><a href="<?= MUSIC_URL; ?>">Music</a></h3>
+						<p>Some music I&#8217;ve written.</p>
 					</div>
 					<div class='col-sm-6'>
 						<?php include(ROOT_PATH.'images/evil-icons/ei-bell.svg'); ?>
@@ -73,8 +71,8 @@
 			<div class='col-sm-6'>
 				<div class='row col_top_buffer'>
 					<div class='col-sm-6'>
-						<h3><a href="<?= BASE_URL.'code/' ?>">Video</a></h3>
-						<p>Some videos I've made.</p>
+						<h3><a href="<?= VIDEO_URL; ?>">Video</a></h3>
+						<p>Some videos I&#8217;ve made.</p>
 					</div>
 					<div class='col-sm-6'>
 						<?php include(ROOT_PATH.'images/evil-icons/ei-camera.svg'); ?>
@@ -84,5 +82,7 @@
 		</div>
 	</main>
 </div>
-	<footer class='container footer'>&copy;2015 Allen Garvey &mdash; <a href="mailto:allen@allengarvey.com">allen@allengarvey.com</a></footer>
+	<footer class='container footer'>contact: <a href="mailto:allen@allengarvey.com">allen@allengarvey.com</a></footer>
+	 <?php include_once(ROOT_PATH.'inc/jquery.php'); ?>
+	 <script src="<?= BASE_URL.'lib/bootstrap/bootstrap.min.js'?>"></script>
 </body></html>
