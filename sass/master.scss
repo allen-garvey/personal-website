@@ -8,15 +8,22 @@ $bootstrap_3_large_device_width : 1200px;
 	font-weight: bold;
 	font-style: italic;
 }
+%brand_subheading_font_style{
+	font-family: Bariol, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: italic;
+}
 
 %heading_font_style{
 	font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 100;
 }
+%body_copy_font_style{
+	font-family: Lora, Times, "Droid Serif", "Times New Roman", "Palatino", serif;
+}
 
 body{
+	@extend %body_copy_font_style;
 	font-size: 14px;
-	font-family: Lora, Times, "Droid Serif", "Times New Roman", "Palatino", serif;
 }
 h1,h2,h3,h4{
 	@extend %heading_font_style;
@@ -29,14 +36,17 @@ h1.logo_text{
 }
 h2{
 	font-size: 2.369em;
+	margin-bottom: .2em;
 }
 h3{
 	font-size: 1.777em;
 }
 .jumbotron .lead{
-	font-family: Bariol, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-style: italic;
+	@extend %brand_subheading_font_style;
 	font-size: 2em;
+}
+p{
+	line-height: 1.5em;
 }
 header.jumbotron{
 	// background-color: darken(red, 12%);
@@ -61,13 +71,7 @@ nav li{
 }
 main{
 	padding: 4em 0 12em 0;
-}
-.allen_pic { //unnecessary once real illustration is used
-    height: 150px;
-
-    
-    width: 150px;
-    overflow: hidden;
+	min-height: 90%;
 }
 svg{
 	height: 50px;
@@ -82,24 +86,14 @@ svg{
 .about_me{
 	margin-bottom: 5em;
 }
-.main{
-	min-height: 95%;
-}
 .footer{
 	font-size: .7em;
 }
-.row_top_buffer{
+.top_buffer{
 	margin-top: $top_buffer_size;
 }
-
-.col_top_buffer{
-	margin-top: $top_buffer_size;
-}
-p{
-	line-height: 1.5em;
-}
-h2{
-	margin-bottom: .2em;
+.center{
+	text-align:center;
 }
 
 @media (min-width: $bootstrap_3_small_device_width) {
