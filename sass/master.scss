@@ -1,51 +1,85 @@
-$top_buffer_size : 2em;
+$top_buffer_size : 6em;
 $bootstrap_3_small_device_width : 768px;
 $bootstrap_3_med_device_width : 992px;
 $bootstrap_3_large_device_width : 1200px;
 
-body{
-	font-size: 16px;
-	font-family: Bariol, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-h1,h2,h3,h4{
-	font-family: Bariol, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 100;
-	margin: 0;
-}
-h1.logo_text{
+%brand_font_style{
 	font-family: Bariol, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	font-style: italic;
+}
+
+%heading_font_style{
+	font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 100;
+}
+
+body{
+	font-size: 14px;
+	font-family: Lora, Times, "Droid Serif", "Times New Roman", "Palatino", serif;
+}
+h1,h2,h3,h4{
+	@extend %heading_font_style;
+	margin: 0;
+}
+h1.logo_text{
+	@extend %brand_font_style;
 	margin-bottom: -0.2em;
-	font-size: 4.5em;
+	font-size: 12em;
+}
+h2{
+	font-size: 2.369em;
+}
+h3{
+	font-size: 1.777em;
 }
 .jumbotron .lead{
 	font-family: Bariol, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-style: italic;
-	font-size: 1.2em;
+	font-size: 2em;
 }
 header.jumbotron{
-	background-color: darken(red, 12%);
+	// background-color: darken(red, 12%);
+	background-color: #A90000;
 	color: white;
-	padding-left: 1em;
-}
-header.jumbotron{
+	
+	// color: #A90000;
+	// background-color: #140807;
+
 	margin-bottom: 0;
+	padding: 0 0 14em 0;
+}
+.main_brand{
+	margin-top: 10em;
+}
+.navbar-brand{
+	@extend %brand_font_style;
+	margin-top: 1em;
+}
+nav li{
+	@extend %heading_font_style;
+}
+main{
+	padding: 4em 0 12em 0;
 }
 .allen_pic { //unnecessary once real illustration is used
-    height: 100px;
-    width: 100px;
+    height: 150px;
+
+    
+    width: 150px;
     overflow: hidden;
 }
 svg{
 	height: 50px;
 	width: 50px;
 }
+.about{
+	padding: 8em 0 8em 0;
+}
 .about p{
 	font-size : 1.1em;
 }
 .about_me{
-	// background-color: gray;
 	margin-bottom: 5em;
 }
 .main{
@@ -61,9 +95,18 @@ svg{
 .col_top_buffer{
 	margin-top: $top_buffer_size;
 }
+p{
+	line-height: 1.5em;
+}
+h2{
+	margin-bottom: .2em;
+}
 
 @media (min-width: $bootstrap_3_small_device_width) {
 	.col_top_buffer{
+		margin-top: 0;
+	}
+	.navbar-brand{
 		margin-top: 0;
 	}
 }
