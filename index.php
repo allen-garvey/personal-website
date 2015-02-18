@@ -20,7 +20,7 @@
 				<p>I&#8217;m a software developer, designer and musician. As far back as I can remember I&#8217;ve always been intensely curious, which leads me to never stop learning. I believe that if you do the work and put in the time for the things that you are most passionate about, good things will come to you.</p>
 			</div>
 			<div class='col-sm-4'>
-				<p>Some highlights so far: I&#8217;ve <strong>written an opera</strong> while completing a degree in music composition, performed professionally <strong>all over the world,</strong> changed track to study computer science, and have created all the illustrations and graphics on this site.</p>
+				<p>Some highlights so far: I&#8217;ve <strong>written an opera</strong> while completing a degree in music composition, <strong>performed all over the world,</strong> changed track to study computer science, <strong>taught web development</strong> and have <strong>created all the illustrations and graphics</strong> on this site.</p>
 			</div>
 			<div class='col-sm-4'>
 				<img src="<?= BASE_URL.'images/allen1.jpg'; ?>" alt="Allen Garvey portrait illustration" height='150px' width='150px' />
@@ -37,7 +37,7 @@
 					<p>Some programs and websites I&#8217;ve made.</p>
 				</div>
 				<div class='col-sm-6'>
-					<?php include(ROOT_PATH.'images/evil-icons/ei-gear.svg'); ?>
+					<img class='icon' src='<?= BASE_URL.'images/icons/code-icon.png'; ?>'/>
 				</div>
 			</div>
 		</div>
@@ -48,13 +48,13 @@
 					<p>Some of my artwork.</p>
 				</div>
 				<div class='col-sm-6'>
-					<?php include(ROOT_PATH.'images/evil-icons/ei-eye.svg'); ?>
+					<img class='icon' src='<?= BASE_URL.'images/icons/art-icon.png'; ?>'/>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class='row top_buffer'>
+	<div class='row top_buffer_sm'>
 		<div class='col-sm-6'>
 			<div class='row'>
 				<div class='col-sm-6'>
@@ -62,7 +62,7 @@
 					<p>Some music I&#8217;ve written.</p>
 				</div>
 				<div class='col-sm-6'>
-					<?php include(ROOT_PATH.'images/evil-icons/ei-bell.svg'); ?>
+					<img class='icon' src='<?= BASE_URL.'images/icons/music-icon.png'; ?>'/>
 				</div>
 			</div>
 		</div>
@@ -73,7 +73,7 @@
 					<p>Some videos I&#8217;ve made.</p>
 				</div>
 				<div class='col-sm-6'>
-					<?php include(ROOT_PATH.'images/evil-icons/ei-camera.svg'); ?>
+					<img class='icon' src='<?= BASE_URL.'images/icons/video-icon.png'; ?>'/>
 				</div>
 			</div>
 		</div>

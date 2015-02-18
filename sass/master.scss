@@ -4,21 +4,18 @@ $bootstrap_3_med_device_width : 992px;
 $bootstrap_3_large_device_width : 1200px;
 
 %brand_font_style{
-	font-family: Bariol, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: bold;
-	font-style: italic;
+	font-family: "Yellowtail", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 %brand_subheading_font_style{
-	font-family: Bariol, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-style: italic;
+	font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 %heading_font_style{
-	font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 100;
+	font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
 }
 %body_copy_font_style{
-	font-family: Lora, Times, "Droid Serif", "Times New Roman", "Palatino", serif;
+	font-family: "Lora", Times, "Droid Serif", "Times New Roman", "Palatino", serif;
 }
 
 body{
@@ -29,11 +26,6 @@ h1,h2,h3,h4{
 	@extend %heading_font_style;
 	margin: 0;
 }
-h1.logo_text{
-	@extend %brand_font_style;
-	margin-bottom: -0.2em;
-	font-size: 12em;
-}
 h2{
 	font-size: 2.369em;
 	margin-bottom: .2em;
@@ -41,9 +33,14 @@ h2{
 h3{
 	font-size: 1.777em;
 }
+h1.logo_text{
+	@extend %brand_font_style;
+	margin-bottom: 0em;
+	font-size: 6em;
+}
 .jumbotron .lead{
 	@extend %brand_subheading_font_style;
-	font-size: 2em;
+	font-size: 1.1em;
 }
 p{
 	line-height: 1.5em;
@@ -52,19 +49,15 @@ header.jumbotron{
 	// background-color: darken(red, 12%);
 	background-color: #A90000;
 	color: white;
-	
-	// color: #A90000;
-	// background-color: #140807;
-
 	margin-bottom: 0;
-	padding: 0 0 14em 0;
+	padding: 0 0 6em 0;
 }
 .main_brand{
-	margin-top: 10em;
+	margin-top: 6em;
 }
 .navbar-brand{
 	@extend %brand_font_style;
-	margin-top: 1em;
+	font-size: 1.5em;
 }
 nav li{
 	@extend %heading_font_style;
@@ -73,12 +66,13 @@ main{
 	padding: 4em 0 12em 0;
 	min-height: 90%;
 }
-svg{
+img.icon{
 	height: 50px;
 	width: 50px;
+	margin-top: 4px;
 }
 .about{
-	padding: 8em 0 8em 0;
+	padding: 2em 0 2em 0;
 }
 .about p{
 	font-size : 1.1em;
@@ -89,18 +83,34 @@ svg{
 .footer{
 	font-size: .7em;
 }
-.top_buffer{
-	margin-top: $top_buffer_size;
+.top_buffer_sm{
+	margin-top: 0;
 }
 .center{
 	text-align:center;
 }
 
 @media (min-width: $bootstrap_3_small_device_width) {
-	.col_top_buffer{
-		margin-top: 0;
+	.top_buffer_sm{
+		margin-top: $top_buffer_size;
 	}
-	.navbar-brand{
-		margin-top: 0;
+
+}
+@media (min-width: $bootstrap_3_large_device_width) {
+	h1.logo_text{
+		margin-bottom: -0.15em;
+		font-size: 15em;
+	}
+	.jumbotron .lead{
+		font-size: 1.4em;
+	}
+	header.jumbotron{
+		padding: 0 0 14em 0;
+	}
+	.main_brand{ //padding for the top of header jumbotron
+		margin-top: 10em;
+	}
+	.about{
+		padding: 8em 0 8em 0;
 	}
 }

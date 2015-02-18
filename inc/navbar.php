@@ -12,7 +12,9 @@
 <nav class='navbar navbar-inverse'>
 	<div class='container'>
 		<button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
-			<?php include(ROOT_PATH.'images/evil-icons/ei-navicon.svg'); ?>
+			<span class='icon-bar'></span>
+			<span class='icon-bar'></span>
+			<span class='icon-bar'></span>
 		</button>
 		<a href="<?= BASE_URL;?>" class='navbar-brand text-muted'>Allen Garvey</a>
 		<div class='collapse navbar-collapse'>
