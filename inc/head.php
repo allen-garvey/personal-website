@@ -1,4 +1,4 @@
-<html><title>Allen Garvey | Software Developer, Designer, Musician</title><head>
+<!DOCTYPE html><html><title>Allen Garvey | Software Developer, Designer, Musician</title><head>
 <meta charset='utf-8' />
 <?php include(ROOT_PATH . 'inc/bootstrap.php'); ?>
 <link rel="stylesheet" type="text/css" href="<?= BASE_URL.'stylesheets/master.css'; ?>">
