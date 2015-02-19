@@ -33,6 +33,7 @@ body {background-color:black;
 }
 
 .feedback_tile{
+	line-height: 70px;
 	background: gray;
 	color: white;
 	text-align: center;
@@ -76,12 +77,12 @@ td.submit{
 	color: black;
 	text-align: center;
 	height:100px;
-	line-height: 100px;
+	line-height: 80px;
 	width: 100px;
 	border-style:solid;
 	border-color:black;
 	border-width:15px;
-	font-size: 25px;
+	font-size: 20px;
 	font-family: Helvetica, 'Helvetica Neue', Arial, 'Cambria', sans-serif;
 
 }
@@ -99,7 +100,7 @@ td.submit{
 	border-style:solid;
 	border-color:black;
 	border-width:15px;
-	font-size: 25px;
+	font-size: 20px;
 	font-family: Helvetica, 'Helvetica Neue', Arial, 'Cambria', sans-serif;
 
 }

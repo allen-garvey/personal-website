@@ -245,7 +245,7 @@ function main(TILES_PER_ROUND){
 	mastermind.tiles = 0
 	mastermind.TILES_PER_ROUND = TILES_PER_ROUND
 	mastermind.COLORS = ["red", "blue", "yellow", "green", "purple", "orange"]
-	mastermind.COLORS_HEX = ["red", "blue", "yellow", "green", "purple",  "ff8700"]
+	mastermind.COLORS_HEX = ["red", "blue", "yellow", "green", "purple",  "#ff8700"]
 	mastermind.SOLUTION = get_Solution(mastermind, mastermind.TILES_PER_ROUND)
 	mastermind.guesses = 0
 
