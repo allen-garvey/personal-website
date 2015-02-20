@@ -1,8 +1,12 @@
 <?php
 
-//config to run on localhost
+//******config to run on localhost
 define("BASE_URL","/Websites/allen_garvey_2/");
 define("ROOT_PATH",$_SERVER["DOCUMENT_ROOT"] . "/Websites/allen_garvey_2/");
+
+//******config to run on namecheap
+// define("BASE_URL","http://allengarvey.com/");
+// define("ROOT_PATH",$_SERVER["DOCUMENT_ROOT"] . "/");
 
 define("CODE_URL", BASE_URL.'code/');
 define("VIDEO_URL", BASE_URL.'video/');
