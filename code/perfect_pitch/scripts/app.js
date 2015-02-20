@@ -89,7 +89,7 @@
 			gameCtlr.playNote();
 		}
 		this.displayAnswer = function(){
-			var noteNames = ['A', 'A#/Bb', 'B', 'C', 'C#/Db', 'D', 'D#/Eb','E', 'F', 'F#/Gb', 'G', 'G#/Ab'];
+			var noteNames = ['A', 'A\u266F/B\u266D', 'B', 'C', 'C\u266F/D\u266D', 'D', 'D\u266F/E\u266D','E', 'F', 'F\u266F/G\u266D', 'G', 'G\u266F/A\u266D'];
 			return noteNames[gameCtlr.answer % 12];
 		}
 		this.newGame = function(){
