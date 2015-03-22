@@ -9,7 +9,8 @@ $successful_results = 'Reset successful';
 function reset_php_permissions(){
     $permissions_level = 750;
     $file_type = '*.php';
-    shell_exec("find . -name '$file_type' -exec chmod $permissions_level {} \; ");
+    //remove cd ../; if directory of chmod.php changes
+    shell_exec("cd ../;find . -name '$file_type' -exec chmod $permissions_level {} \; ");
 }
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
 	if(!empty($_POST["user"]) && $_POST["user"] === $username  && !empty($_POST["password"] && $_POST["password"] === $password )){
