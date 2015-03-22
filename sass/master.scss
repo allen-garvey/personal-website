@@ -2,6 +2,8 @@ $top_buffer_size : 6em;
 $bootstrap_3_small_device_width : 768px;
 $bootstrap_3_med_device_width : 992px;
 $bootstrap_3_large_device_width : 1200px;
+$footer_height: 12em;
+$sub_title_font_size : 1.1em;
 
 %brand_font_style{
 	font-family: "Yellowtail", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -17,19 +19,31 @@ $bootstrap_3_large_device_width : 1200px;
 %body_copy_font_style{
 	font-family: "Lora", Times, "Droid Serif", "Times New Roman", "Palatino", serif;
 }
-html{
+html,body{
 	height: 100%;
 }
 body{
 	@extend %body_copy_font_style;
 	font-size: 14px;
-	height: 93%;
 }
 main{
-	padding: 4em 0 12em 0;
+	//bottom padding is height of footer so it stays on bottom
+	padding: 4em 0 $footer_height 0;
 }
-.main{
-	min-height: 93%;
+footer{
+	font-size: .7em;
+	width:100%;
+	height:$footer_height + 4em;
+	position:absolute;
+	bottom:0;
+	left:0;
+	text-align: center;
+	padding-top: $footer_height;
+}
+.total{
+	//used to place footer at the bottom of the page
+	min-height: 100%;
+	position: relative;
 }
 h1,h2,h3,h4{
 	@extend %heading_font_style;
@@ -42,28 +56,41 @@ h2{
 h3{
 	font-size: 1.777em;
 }
+header.jumbotron{
+	padding: 0 0 4em 0;
+}
+//*styles for heading on section home pages
+header.section_header{
+	padding-bottom: 8em;
+}
+p.section_header{
+	font-size: $sub_title_font_size;
+	margin-top: 1em;
+	line-height: 1.6em;
+}
+//***************home page logo text
 h1.logo_text{
 	@extend %brand_font_style;
 	margin-bottom: 0em;
-	font-size: 6em;
+	font-size: 4.1em;
 }
 .jumbotron .lead{
 	@extend %brand_subheading_font_style;
-	font-size: 1.1em;
+	font-size: 0.7em;
 }
 p{
 	line-height: 1.5em;
 }
-header.jumbotron{
+header.home{
 	// background-color: darken(red, 12%);
 	background-color: #A90000;
 	color: white;
 	margin-bottom: 0;
-	padding: 0 0 6em 0;
 }
 .main_brand{
-	margin-top: 6em;
+	margin-top: 4em;
 }
+//******************** navbar styles
 .navbar-brand{
 	@extend %brand_font_style;
 	font-size: 1.5em;
@@ -74,19 +101,15 @@ nav li{
 img.icon{
 	height: 50px;
 	width: 50px;
-	margin-top: 4px;
 }
 .about{
 	padding: 2em 0 2em 0;
 }
 .about p{
-	font-size : 1.1em;
+	font-size : $sub_title_font_size;
 }
 .about_me{
 	margin-bottom: 5em;
-}
-.footer{
-	font-size: .7em;
 }
 .top_buffer_sm{
 	margin-top: 0;
@@ -99,13 +122,41 @@ img.icon{
 	margin: 0 auto;
 	margin-bottom: $top_buffer_size;
 }
+.top_margin_sm_max{ //so that on small screen sizes tops column groups don't bump into each other
+	margin-top: 3em;
+}
+.sm_col_desc{ //used for p descriptions in columns so they are not separated from related pictures
+	margin-bottom:0;
+}
 
 @media (min-width: $bootstrap_3_small_device_width) {
+	.top_margin_sm_max{
+		margin-top: 0;
+	}
 	.top_buffer_sm{
 		margin-top: $top_buffer_size;
 	}
 	.video_container{
 		width: 640px;
+	}
+// homepage logotext
+	h1.logo_text{
+		@extend %brand_font_style;
+		margin-bottom: 0em;
+		font-size: 6em;
+	}
+	.jumbotron .lead{
+		@extend %brand_subheading_font_style;
+		font-size: 1.1em;
+	}
+	.main_brand{
+		margin-top: 6em;
+	}
+	img.icon{
+		margin-top: 4px;
+	}
+	.sm_col_desc{
+		margin-bottom:10px;
 	}
 
 }
@@ -117,13 +168,13 @@ img.icon{
 	.jumbotron .lead{
 		font-size: 1.4em;
 	}
-	header.jumbotron{
+	header.home{
 		padding: 0 0 14em 0;
 	}
 	.main_brand{ //padding for the top of header jumbotron
 		margin-top: 10em;
 	}
 	.about{
-		padding: 8em 0 8em 0;
+		padding: 5em 0 6em 0;
 	}
 }
