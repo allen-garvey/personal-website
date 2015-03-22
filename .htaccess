@@ -1,3 +1,4 @@
+ErrorDocument 404 http://www.allengarvey.com/404.php
 Options +FollowSymLinks
 RewriteEngine On
 #interactive directory renamed to code
