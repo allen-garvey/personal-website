@@ -16,21 +16,34 @@
 	$items_per_row = 4;
 
 ?>
-<body>
+<header class='jumbotron section_header'>
 	<?php include(ROOT_PATH.'inc/navbar.php'); ?>
-	<main class='container main'>
+	<div class='container'>
+		<h1 class='section_header'>Code</h1>
 		<div class='row'>
-			<?php
-				$i = 0;
-				foreach ($code_model as $entry) {
-					if($i > 0 && $i % $items_per_row === 0){
-						echo "</div><div class='row top_buffer_sm'>";
-					}
-					echo "<div class='col-md-3'><h3><a href=$entry[link]>$entry[title]</a></h3></div>";
-					
-					$i++;
-				}
-			?>
+			<div class='col-sm-6'>
+				<p class='section_header'>
+					Though I grew up around computers and learned basic HTML4 while still in school, it wasn't until April 2013 that I started to learn programming with <em>Python the Hard Way.</em>
+					Since then I can&#8217;t imagine <em>not</em> knowing how to program, and am always amazed by how far I&#8217;ve come in such a short time.
+					Here's a small sample of the apps and websites I've made since then.
+				</p>
+			</div>
 		</div>
-	</main>
+	</div>
+</header>
+<main class='container'>
+	<div class='row'>
+		<?php
+			$i = 0;
+			foreach ($code_model as $entry) {
+				if($i > 0 && $i % $items_per_row === 0){
+					echo "</div><div class='row top_buffer_sm'>";
+				}
+				echo "<div class='col-md-3'><h3><a href=$entry[link]>$entry[title]</a></h3></div>";
+				
+				$i++;
+			}
+		?>
+	</div>
+</main>
 <?php include(ROOT_PATH.'inc/footer.php'); ?>

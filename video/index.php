@@ -3,16 +3,32 @@
 	include(ROOT_PATH.'inc/head.php');
 	$title = 'video'; //for nav-bar active class
 ?>
-<body>
+<header class='jumbotron section_header'>
 	<?php include(ROOT_PATH.'inc/navbar.php'); ?>
-	<main class='container main'>
-		<div class='video_container'>
-			<iframe width="100%" height="360" src="http://www.youtube-nocookie.com/embed/WEsaplY1yco" frameborder="0" allowfullscreen></iframe>
-			<p>A re-scoring of a clip from Final Fantasy XIV. Features a mix of epic orchestral, funk and electronic musical styles.</p>
+	<div class='container'>
+		<h1 class='section_header'>Video</h1>
+		<div class='row'>
+			<div class='col-sm-6'>
+				<p class='section_header'>
+					Movie and video game scoring fascinates me because of its rare and challenging combination of music composition, technology, performance, sound design, sound engineering and music production.
+					Here&#8217;s a selection of some of the clips I&#8217;ve scored.
+				</p>
+			</div>
 		</div>
-		<div class='video_container'>
-			<iframe width="100%" height="360" src="http://www.youtube-nocookie.com/embed/N67DgzuSpEQ" frameborder="0" allowfullscreen></iframe>
-			<p>A re-scoring of the trailer for "The Edge of Tomorrow". Features a mix of electronic, soundscape/sound design and orchestral styles.</p>
-		</div>
-	</main>
+	</div>
+</header>
+<main class='container'>
+	<div class='video_container'>
+		<iframe width="100%" height="360" src="http://www.youtube-nocookie.com/embed/WEsaplY1yco" frameborder="0" allowfullscreen></iframe>
+		<p>A re-scoring of a clip from Final Fantasy XIV. This dramatic scene was both fun challenging to score. 
+			It ended up being a showcase for my eclectic musical taste&#8212;I managed to use orchestral, funk, dubstep, downtempo, and a little polytonality all in the same track.</p>
+	</div>
+	<div class='video_container'>
+		<iframe width="100%" height="360" src="http://www.youtube-nocookie.com/embed/N67DgzuSpEQ" frameborder="0" allowfullscreen></iframe>
+		<p>
+			A re-scoring of the trailer for "The Edge of Tomorrow". 
+			This trailer was a perfect fit both subject and lengthwise for a dark, atmospheric, militaristic track I had already written, and so I was was able to fit them together with only slight modifications.
+		</p>
+	</div>
+</main>
 <?php include(ROOT_PATH.'inc/footer.php'); ?>
