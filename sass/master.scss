@@ -17,14 +17,14 @@ $sub_title_font_size : 1.1em;
 	font-weight: 300;
 }
 %body_copy_font_style{
-	font-family: "Lora", Times, "Droid Serif", "Times New Roman", "Palatino", serif;
+	font-family: "Book Antiqua", "Palatino Linotype", Palatino, Georgia, serif;
 }
 html,body{
 	height: 100%;
 }
 body{
 	@extend %body_copy_font_style;
-	font-size: 14px;
+	font-size: 16px;
 }
 main{
 	//bottom padding is height of footer so it stays on bottom
