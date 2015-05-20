@@ -3,6 +3,7 @@
 	include(ROOT_PATH.'inc/head.php');
 	$title = 'code'; //for nav-bar active class
 	$code_model = [];
+	$code_model[] = ['title' => 'Annuncified', 'link' => 'https://github.com/allen-garvey/annuncified', 'release_date' => '05/19/2015'];
 	$code_model[] = ['title' => 'Android Inflater', 'link' => CODE_URL.'android-inflater/', 'release_date' => '02/10/2015'];
 	$code_model[] = ['title' => 'Font Check (github)', 'link' => 'https://github.com/allen-garvey/font-check/', 'release_date' => '02/05/2015'];
 	$code_model[] = ['title' => 'Ruby Launcher (github)', 'link' => 'https://github.com/allen-garvey/ruby-launcher/', 'release_date' => '01/12/2015'];
