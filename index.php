@@ -21,7 +21,7 @@
 				<p>Some highlights so far: I&#8217;ve <strong>written an opera</strong> while completing a degree in music composition, <strong>performed all over the world,</strong> changed track to study computer science, <strong>taught web development</strong> to high-schoolers and have <strong>created all the illustrations and graphics</strong> on this site.</p>
 			</div>
 			<div class='col-sm-4'>
-				<img src="<?= BASE_URL.'images/allen1.jpg'; ?>" alt="Allen Garvey portrait illustration" height='150px' width='150px' />
+				<img src="<?= BASE_URL.'images/allen1.jpg'; ?>" alt="Allen Garvey portrait illustration" height='150' width='150' />
 			</div>
 		</div>
 	</div>
@@ -35,7 +35,7 @@
 					<p class='sm_col_desc'>Some apps and websites I&#8217;ve made.</p>
 				</div>
 				<div class='col-sm-6'>
-					<img class='icon' src='<?= BASE_URL.'images/icons/code-icon.png'; ?>'/>
+					<img class='icon' alt='' src='<?= BASE_URL.'images/icons/code-icon.png'; ?>'/>
 				</div>
 			</div>
 		</div>
@@ -46,7 +46,7 @@
 					<p class='sm_col_desc'>Some of my artwork, illustrations and designs.</p>
 				</div>
 				<div class='col-sm-6'>
-					<img class='icon' src='<?= BASE_URL.'images/icons/art-icon.png'; ?>'/>
+					<img class='icon' alt='' src='<?= BASE_URL.'images/icons/art-icon.png'; ?>'/>
 				</div>
 			</div>
 		</div>
@@ -60,7 +60,7 @@
 					<p class='sm_col_desc'>Some music I&#8217;ve written.</p>
 				</div>
 				<div class='col-sm-6'>
-					<img class='icon' src='<?= BASE_URL.'images/icons/music-icon.png'; ?>'/>
+					<img class='icon' alt='' src='<?= BASE_URL.'images/icons/music-icon.png'; ?>'/>
 				</div>
 			</div>
 		</div>
@@ -71,7 +71,7 @@
 					<p class='sm_col_desc'>Some videos I&#8217;ve made.</p>
 				</div>
 				<div class='col-sm-6'>
-					<img class='icon' src='<?= BASE_URL.'images/icons/video-icon.png'; ?>'/>
+					<img class='icon' alt='' src='<?= BASE_URL.'images/icons/video-icon.png'; ?>'/>
 				</div>
 			</div>
 		</div>

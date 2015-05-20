@@ -1,5 +1,6 @@
-<!DOCTYPE html><html><title>Allen Garvey | Software Developer, Designer, Musician</title><head>
+<!DOCTYPE html><html><head>
 <meta charset='utf-8' />
+<title>Allen Garvey | Software Developer, Designer, Musician</title>
 <?php include(ROOT_PATH . 'inc/bootstrap.php'); ?>
 <link href='http://fonts.googleapis.com/css?family=Yellowtail&amp;text=AlenGarvy' rel='stylesheet' type='text/css'/>
 <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'/>
