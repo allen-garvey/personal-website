@@ -2,6 +2,13 @@
 	require_once('../inc/config.php');
 	include(ROOT_PATH.'inc/head.php');
 	$title = 'video'; //for nav-bar active class
+
+	//video model
+	$videos = array();
+	$videos[] = array('url' => 'http://www.youtube-nocookie.com/embed/WEsaplY1yco', 'description' => 'A re-scoring of a clip from Final Fantasy XIV. This dramatic scene was both fun challenging to score. 
+			It ended up being a showcase for my eclectic musical taste&#8212;I managed to use orchestral, funk, dubstep, downtempo, and a little polytonality all in the same track.');
+	$videos[] = array('url' => 'http://www.youtube-nocookie.com/embed/N67DgzuSpEQ', 'description' => 'A re-scoring of the trailer for "The Edge of Tomorrow". 
+			This trailer was a perfect fit both subject and lengthwise for a dark, atmospheric, militaristic track I had already written, and so I was was able to fit them together with only slight modifications.');
 ?>
 <header class='jumbotron section_header'>
 	<?php include(ROOT_PATH.'inc/navbar.php'); ?>
@@ -18,17 +25,10 @@
 	</div>
 </header>
 <main class='container'>
-	<div class='video_container'>
-		<iframe width="100%" height="360" src="http://www.youtube-nocookie.com/embed/WEsaplY1yco" frameborder="0" allowfullscreen></iframe>
-		<p>A re-scoring of a clip from Final Fantasy XIV. This dramatic scene was both fun challenging to score. 
-			It ended up being a showcase for my eclectic musical taste&#8212;I managed to use orchestral, funk, dubstep, downtempo, and a little polytonality all in the same track.</p>
-	</div>
-	<div class='video_container'>
-		<iframe width="100%" height="360" src="http://www.youtube-nocookie.com/embed/N67DgzuSpEQ" frameborder="0" allowfullscreen></iframe>
-		<p>
-			A re-scoring of the trailer for "The Edge of Tomorrow". 
-			This trailer was a perfect fit both subject and lengthwise for a dark, atmospheric, militaristic track I had already written, and so I was was able to fit them together with only slight modifications.
-		</p>
-	</div>
+	<?php 
+		foreach ($videos as $video) {
+			echo "<div class='video_container'>" . "<iframe class='youtube' src='$video[url]' allowfullscreen></iframe>" . "<p>$video[description]</p>" . "</div>";
+		}
+	 ?>
 </main>
 <?php include(ROOT_PATH.'inc/footer.php'); ?>
