@@ -128,6 +128,13 @@ img.icon{
 	margin-bottom:0;
 }
 
+//*************Video page
+.youtube{
+	width : 100%;
+	height : 360px;
+	frameborder : 0;
+}
+
 @media (min-width: $bootstrap_3_small_device_width) {
 	.top_margin_sm_max{
 		margin-top: 0;
