@@ -139,9 +139,6 @@ img.icon{
 	.top_margin_sm_max{
 		margin-top: 0;
 	}
-	.top_buffer_sm{
-		margin-top: $top_buffer_size;
-	}
 	.video_container{
 		width: 640px;
 	}
@@ -166,6 +163,12 @@ img.icon{
 	}
 
 }
+@media(min-width: $bootstrap_3_med_device_width){
+	.top_buffer_sm{
+		margin-top: $top_buffer_size;
+	}
+}
+
 @media (min-width: $bootstrap_3_large_device_width) {
 	h1.logo_text{
 		margin-bottom: -0.15em;
