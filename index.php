@@ -1,10 +1,10 @@
 <?php 
 	include_once('inc/config.php');
-	include(ROOT_PATH.'inc/head.php');
+	include(ROOT_PATH.'inc/views/head.php');
 	$title = 'home'; //for nav-bar active class
 ?>
 <header class='jumbotron home'>
-	<?php include(ROOT_PATH.'inc/navbar.php'); ?>
+	<?php include(ROOT_PATH.'inc/views/navbar.php'); ?>
 	<div class='container main_brand'>
 		<h1 class='logo_text'>Allen Garvey</h1>
 		<p class='lead'>Software Developer, Designer, Musician</p>
@@ -78,4 +78,4 @@
 	</div>
 </main>
 
-<?php include(ROOT_PATH.'inc/footer.php'); ?>
+<?php include(ROOT_PATH.'inc/views/footer.php'); ?>
