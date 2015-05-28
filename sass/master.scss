@@ -55,6 +55,10 @@ h3{
 img{
 	max-width: 100%;
 }
+ul{
+	list-style-type:square;
+}
+
 a:link{
 	color : $blue;
 }
@@ -113,7 +117,7 @@ aside{
 //****************classes so footer stays at bottom
 main{
 	//bottom padding is height of footer so it stays on bottom
-	padding: 2em 0 $footer_height 0;
+	padding: 0 0 $footer_height 0;
 }
 footer{
 	font-size: .7em;
@@ -171,6 +175,11 @@ header.home{
 .icon{
 	max-height: 50px;
 	max-width: 50px;
+}
+
+//*************homepage about me section
+.highlights_list li{
+	margin-top: 0.6em;
 }
 .about{
 	padding: 2em 0 2em 0;
