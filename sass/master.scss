@@ -5,11 +5,20 @@ $bootstrap_3_large_device_width : 1200px;
 $footer_height: 12em;
 $sub_title_font_size : 1.1em;
 
+// $purple : #603096;
+// $purple : #62428F;
+// $blue : #2329BF;
+// $blue : #2539BF;
+// $red : #E5310C;
+$red:#E51707;
+// $cyan : #49D3E8;
+//*****colors from personal comic book cover project
+$purple : #471267;
+$blue : #0084BA;
+$cyan : #A3C6DF;
+
 %brand_font_style{
 	font-family: "Yellowtail", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-%brand_subheading_font_style{
-	font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 %heading_font_style{
@@ -19,6 +28,8 @@ $sub_title_font_size : 1.1em;
 %body_copy_font_style{
 	font-family: "Book Antiqua", "Palatino Linotype", Palatino, Georgia, serif;
 }
+
+//***********Base styles
 html,body{
 	height: 100%;
 }
@@ -26,9 +37,83 @@ body{
 	@extend %body_copy_font_style;
 	font-size: 16px;
 }
+
+h1,h2,h3,h4{
+	@extend %heading_font_style;
+	margin: 0;
+}
+h1{
+	font-size : 3.157em;
+}
+h2{
+	font-size: 2.369em;
+	margin-bottom: .2em;
+}
+h3{
+	font-size: 1.777em;
+}
+img{
+	max-width: 100%;
+}
+a:link{
+	color : $blue;
+}
+a:visited{
+	color: $purple;
+}
+a:hover{
+
+}
+a:active{
+	color: $red;
+}
+
+aside{
+	margin-bottom:0.5em;
+	opacity:0.75;
+}
+
+.red_background{
+	background-color : lighten($red, 48%);
+}
+.blue_background{
+	background-color : $cyan; //lighten($blue, 48%)
+}
+.purple_background{
+	background-color : lighten($purple, 51%);
+}
+
+//*****************general helper classes
+.italic{
+	font-style:italic;
+}
+.top_margin_sm{
+	margin-top : 1.5em;
+}
+.bottom_margin_sm{
+	margin-bottom:3em;
+}
+
+.top_buffer_sm{
+	margin-top: 0;
+}
+.center{
+	text-align:center;
+}
+
+.top_margin_sm_max{ //so that on small screen sizes tops column groups don't bump into each other
+	margin-top: 3em;
+}
+.sm_col_desc{ //used for p descriptions in columns so they are not separated from related pictures
+	margin-bottom:0;
+}
+
+
+
+//****************classes so footer stays at bottom
 main{
 	//bottom padding is height of footer so it stays on bottom
-	padding: 4em 0 $footer_height 0;
+	padding: 2em 0 $footer_height 0;
 }
 footer{
 	font-size: .7em;
@@ -44,29 +129,22 @@ footer{
 	min-height: 100%;
 	position: relative;
 }
-h1,h2,h3,h4{
-	@extend %heading_font_style;
-	margin: 0;
-}
-h2{
-	font-size: 2.369em;
-	margin-bottom: .2em;
-}
-h3{
-	font-size: 1.777em;
-}
+//********************jumbotron settings
 header.jumbotron{
 	padding: 0 0 4em 0;
 }
-//*styles for heading on section home pages
+//*****************styles for section home pages
 header.section_header{
-	padding-bottom: 8em;
+	// padding-bottom: 8em;
+	padding-bottom: 0;
 }
 p.section_header{
 	font-size: $sub_title_font_size;
 	margin-top: 1em;
 	line-height: 1.6em;
 }
+
+
 //***************home page logo text
 h1.logo_text{
 	@extend %brand_font_style;
@@ -74,32 +152,25 @@ h1.logo_text{
 	font-size: 4.1em;
 }
 .jumbotron .lead{
-	@extend %brand_subheading_font_style;
+	@extend %heading_font_style;
 	font-size: 0.7em;
 }
 p{
 	line-height: 1.5em;
 }
 header.home{
-	// background-color: darken(red, 12%);
-	background-color: #A90000;
+	// background-color: #A90000;
+	background-color:$red;
 	color: white;
 	margin-bottom: 0;
 }
 .main_brand{
 	margin-top: 4em;
 }
-//******************** navbar styles
-.navbar-brand{
-	@extend %brand_font_style;
-	font-size: 1.5em;
-}
-nav li{
-	@extend %heading_font_style;
-}
-img.icon{
-	height: 50px;
-	width: 50px;
+//*************homepage styles
+.icon{
+	max-height: 50px;
+	max-width: 50px;
 }
 .about{
 	padding: 2em 0 2em 0;
@@ -110,22 +181,14 @@ img.icon{
 .about_me{
 	margin-bottom: 5em;
 }
-.top_buffer_sm{
-	margin-top: 0;
+
+//******************** navbar styles
+.navbar-brand{
+	@extend %brand_font_style;
+	font-size: 1.5em;
 }
-.center{
-	text-align:center;
-}
-.video_container{
-	width: 100%;
-	margin: 0 auto;
-	margin-bottom: $top_buffer_size;
-}
-.top_margin_sm_max{ //so that on small screen sizes tops column groups don't bump into each other
-	margin-top: 3em;
-}
-.sm_col_desc{ //used for p descriptions in columns so they are not separated from related pictures
-	margin-bottom:0;
+nav li{
+	@extend %heading_font_style;
 }
 
 //*************Video page
@@ -134,22 +197,80 @@ img.icon{
 	height : 360px;
 	frameborder : 0;
 }
+.video_container{
+	margin: 0 auto;
+	margin-bottom: $top_buffer_size;
+	max-width: 640px;
+	background-color: lighten($purple, 60%);
+}
+
+//***************Artwork page
+.thumbnail_container{
+	max-width: 256px;
+	max-height: 256px;
+	display: block;
+	margin: 0 auto 3em auto;
+	border : 1px solid black; //for older browsers
+	border : 1px solid rgba(0,0,0,0.1);
+}
+
+.thumbnail_container img{
+	width: 100%;
+}
+//to get color change on images on hover
+.thumb_container_red:hover{
+	background-color : $red;
+}
+.thumbnail_container img:hover{
+	opacity : 0.5;
+}
+
+//******************Code page
+.code_link figure{
+	display:inline-block;
+	margin-bottom:1em;
+	max-width:256px;
+	max-height:256px;
+	// background-color:$blue;
+}
+//used to differentiate links to github
+.code_link[href*="github"] h3:after{
+	content: "*";
+	position: relative;
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
+	top: -0.5em;
+	text-decoration:none;
+}
+.code_link figure:hover{
+	opacity : 0.5;
+}
+
+
+//*******************************************
+//*************Media Queries*****************
+//*******************************************
 
 @media (min-width: $bootstrap_3_small_device_width) {
+	.thumbnail_container, .code_container{
+		display: inline-block;
+		margin: 0 1em 1em 0;
+	}
 	.top_margin_sm_max{
 		margin-top: 0;
 	}
-	.video_container{
-		width: 640px;
+	.bottom_margin_sm{
+		margin-bottom: 0;
 	}
-// homepage logotext
+//*********** homepage logotext
 	h1.logo_text{
 		@extend %brand_font_style;
 		margin-bottom: 0em;
 		font-size: 6em;
 	}
 	.jumbotron .lead{
-		@extend %brand_subheading_font_style;
+		@extend %heading_font_style;
 		font-size: 1.1em;
 	}
 	.main_brand{
@@ -164,12 +285,18 @@ img.icon{
 
 }
 @media(min-width: $bootstrap_3_med_device_width){
+
 	.top_buffer_sm{
 		margin-top: $top_buffer_size;
 	}
 }
 
 @media (min-width: $bootstrap_3_large_device_width) {
+	//***************Base styles
+	.jumbotron h1{
+		font-size: 4em;
+	}
+
 	h1.logo_text{
 		margin-bottom: -0.15em;
 		font-size: 15em;
