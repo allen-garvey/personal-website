@@ -1,7 +1,10 @@
 <?php 
 	include_once('inc/config.php');
+	include_once(ROOT_PATH.'inc/models/sections_model.php');
 	include(ROOT_PATH.'inc/views/head.php');
 	$title = 'home'; //for nav-bar active class
+	$sections = sections_model();
+
 ?>
 <header class='jumbotron home'>
 	<?php include(ROOT_PATH.'inc/views/navbar.php'); ?>
@@ -35,55 +38,28 @@
 		</div>
 	</article>
 	<article class='container'>
-		<div class='row'>
-			<section class='col-sm-6'>
-				<div class='row'>
-					<div class='col-sm-6'>
-						<h3><a href="<?= CODE_URL; ?>">Code</a></h3>
-						<p class='sm_col_desc'>Websites, web applications and Mac, iOS and Android apps</p>
-					</div>
-					<div class='col-sm-6'>
-						<img class='icon' alt='' src='<?= BASE_URL.'images/icons/code-icon.png'; ?>'/>
-					</div>
-				</div>
-			</section>
-			<section class='col-sm-6 top_margin_sm_max'>
-				<div class='row'>
-					<div class='col-sm-6'>
-						<h3><a href="<?= ARTWORK_URL; ?>">Artwork</a></h3>
-						<p class='sm_col_desc'>Photos, illustrations and digital art</p>
-					</div>
-					<div class='col-sm-6'>
-						<img class='icon' alt='' src='<?= BASE_URL.'images/icons/art-icon.png'; ?>'/>
-					</div>
-				</div>
-			</section>
-		</div>
+			<?php 
+			$i = 0;
+			$sections_per_row = 2;
 
-		<div class='row top_buffer_sm top_margin_sm_max'>
-			<section class='col-sm-6'>
-				<div class='row'>
-					<div class='col-sm-6'>
-						<h3><a href="<?= MUSIC_URL; ?>">Music</a></h3>
-						<p class='sm_col_desc'>Compositions and arrangements in jazz, classical, electronic and eclectic styles</p>
-					</div>
-					<div class='col-sm-6'>
-						<img class='icon' alt='' src='<?= BASE_URL.'images/icons/music-icon.png'; ?>'/>
-					</div>
-				</div>
-			</section>
-			<section class='col-sm-6 top_margin_sm_max'>
-				<div class='row'>
-					<div class='col-sm-6'>
-						<h3><a href="<?= VIDEO_URL; ?>">Video</a></h3>
-						<p class='sm_col_desc'>Game and movie trailers, rescored with original music</p>
-					</div>
-					<div class='col-sm-6'>
-						<img class='icon' alt='' src='<?= BASE_URL.'images/icons/video-icon.png'; ?>'/>
-					</div>
-				</div>
-			</section>
-		</div>
+			foreach ($sections as $section) {
+				$row_class = 'row';
+				$section_class = 'col-sm-6 bottom_margin_sm_max';
+
+				if(($i !== 0) && ($i % $sections_per_row === 0)){
+					$row_class = $row_class . ' top_buffer_sm';
+				}
+				if($i % $sections_per_row===0){
+					echo "<div class='$row_class'>";
+					include(ROOT_PATH.'inc/views/homepage_section.php');	
+				}
+				else{
+					include(ROOT_PATH.'inc/views/homepage_section.php');
+					echo "</div>";
+				}
+				$i++;
+			}
+		 ?>
 	</article>
 </main>
 
