@@ -76,7 +76,7 @@
 				<div class='row'>
 					<div class='col-sm-6'>
 						<h3><a href="<?= VIDEO_URL; ?>">Video</a></h3>
-						<p class='sm_col_desc'>Some videos I&#8217;ve made.</p>
+						<p class='sm_col_desc'>Game and movie trailers, rescored with original music</p>
 					</div>
 					<div class='col-sm-6'>
 						<img class='icon' alt='' src='<?= BASE_URL.'images/icons/video-icon.png'; ?>'/>
