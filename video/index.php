@@ -22,7 +22,9 @@
 <main class='container'>
 	<?php 
 		foreach ($videos as $video) {
-			echo "<div class='video_container'>" . "<iframe class='youtube' src='$video[url]' allowfullscreen></iframe>" . "<p>".format_html_text($video['description'])."</p>" . "</div>";
+			$release_date = DateTime::createFromFormat('m/d/Y', $video['release_date']);
+			$formatted_release_date = $release_date->format('m/d/y');
+			echo "<section class='video_container'>" . "<h2>$video[title]</h2>" . "<iframe class='youtube' src='$video[url]' allowfullscreen></iframe>" . "<p>".format_html_text($video['description'])."</p>" ."<small class='italic'>$formatted_release_date</small>" . "</section>";
 		}
 	 ?>
 </main>
