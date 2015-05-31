@@ -12,16 +12,16 @@
 	$section_header = [];
 	$section_header['title'] = 'Code';
 	$section_header['header_class'] = 'blue_background';
-	$section_header['body'] = format_html_text("Though I grew up around computers and learned basic HTML4 while still in school, it wasn't until April 2013 that I started to learn programming with <em>Python the Hard Way.</em>
-					Since then I can't imagine <em>not</em> knowing how to program, and am always amazed by how far I've come in such a short time.
-					Here's a small sample of the apps and websites I've made since then.");
+	$section_header['body'] = format_html_text("What I enjoy about programming is that you are only limited by your own imagination. 
+		At the same time, there are pragmatic limitations that you have to overcome, as I learned after creating my first real program in Python, when I discovered how hard it would be to deploy to my family and friends. 
+		I'm also fascinated by the tension between web and native apps. While the web has almost unlimited reach, it has limited capabilities compared to native apps, while native apps will always be stuck (to an extent) on the platforms they are created for.");
 	$section_header['image'] = ['url' => 'portraits/allen-garvey-code-portrait.png', 'alt' => 'Self-portrait of Allen Garvey using character glyphs'];
 	include(ROOT_PATH.'inc/views/section_header.php');
 
 ?>
 
 <main class='container'>
-	<aside><sup>*</sup> indicates link to github</aside>
+	<aside class='bottom_margin'><sup>*</sup> indicates link to github</aside>
 	<div class='row'>
 		<?php
 			$i = 0;
