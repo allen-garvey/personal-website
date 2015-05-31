@@ -1,5 +1,6 @@
 <?php 
 	require_once('../inc/config.php');
+	require_once(ROOT_PATH.'inc/controllers/functions.php');
 	include(ROOT_PATH.'inc/views/head.php');
 	$title = 'music'; //for nav-bar active class
 
@@ -7,12 +8,9 @@
 	$section_header = [];
 	$section_header['title'] = 'Music';
 	$section_header['header_class'] = 'purple_background';
-	$section_header['body'] = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+	$section_header['body'] = format_html_text("What I love about music is how it can be anything you want---from very simple to impossibly complex. 
+		I like to have a balance between preparation and spontaneity---of being able to have a general plan while still allowing the possibility of happy accidents. 
+		I like music that transcends genre, because it enables the listener to be pleasantly surprised since anything can happen");
 	$section_header['image'] = ['url' => 'portraits/allen-garvey-video-portrait.gif', 'alt' => 'Low-res bitmap photo self-portrait of Allen Garvey'];
 	
 	include(ROOT_PATH.'inc/views/section_header.php');
