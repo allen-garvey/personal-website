@@ -44,7 +44,7 @@
 
 			foreach ($sections as $section) {
 				$row_class = 'row';
-				$section_class = 'col-sm-6 bottom_margin_sm_max';
+				$section_class = 'col-sm-6 bottom_margin_sm_only';
 
 				if(($i !== 0) && ($i % $sections_per_row === 0)){
 					$row_class = $row_class . ' top_buffer_sm';
