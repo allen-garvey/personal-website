@@ -12,8 +12,7 @@
 	$section_header = [];
 	$section_header['title'] = 'Video';
 	$section_header['header_class'] = 'purple_background';
-	$section_header['body'] = format_html_text("Movie and video game scoring fascinates me because of its rare and challenging combination of music composition, technology, performance, sound design, sound engineering and music production.
-					Here's a selection of some of the clips I've scored.");
+	$section_header['body'] = format_html_text("I think that music is an integral part of movies and games, and my favorites always have great soundtracks. What I find most intriguing is how music can enhance drama and continuity, or even create it. Imagine what Star Wars, Inception, Halo, Bioshock, or The Last of Us would be like <em>without</em> music.");
 	$section_header['image'] = ['url' => 'portraits/allen-garvey-video-portrait.gif', 'alt' => 'Low-res bitmap photo self-portrait of Allen Garvey'];
 	include(ROOT_PATH.'inc/views/section_header.php');
 
