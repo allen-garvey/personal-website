@@ -1,9 +1,7 @@
 <?php 
 	include_once('inc/config.php');
-	include_once(ROOT_PATH.'inc/models/sections_model.php');
 	include(ROOT_PATH.'inc/views/head.php');
 	$title = 'home'; //for nav-bar active class
-	$sections = sections_model();
 
 ?>
 <header class='jumbotron home'>
@@ -38,28 +36,9 @@
 		</div>
 	</article>
 	<article class='container'>
-			<?php 
-			$i = 0;
-			$sections_per_row = 2;
-
-			foreach ($sections as $section) {
-				$row_class = 'row';
-				$section_class = 'col-sm-6 bottom_margin_sm_only';
-
-				if(($i !== 0) && ($i % $sections_per_row === 0)){
-					$row_class = $row_class . ' top_buffer_sm';
-				}
-				if($i % $sections_per_row===0){
-					echo "<div class='$row_class'>";
-					include(ROOT_PATH.'inc/views/homepage_section.php');	
-				}
-				else{
-					include(ROOT_PATH.'inc/views/homepage_section.php');
-					echo "</div>";
-				}
-				$i++;
-			}
-		 ?>
+		<?php 
+			include_once(ROOT_PATH.'inc/views/main_sections.php');
+	 	?>
 	</article>
 </main>
 
