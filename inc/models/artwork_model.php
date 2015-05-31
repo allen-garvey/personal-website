@@ -21,7 +21,28 @@ function artworks(){
 										'full_url' => 'allen-garvey-bitter-polar-bear.png', 
 										'thumb_url' => 'allen-garvey-bitter-polar-bear-thumbnail.jpg', 
 										'alt' => 'Digital illustration of a bitter polar bear by Allen Garvey based on photo by Mike Reyfman', 
-										'description' => 'Illustration of a bitter polar bear based on a photo by Mike Reyfman'];	
+										'description' => 'Illustration of a bitter polar bear based on a photo by Mike Reyfman'];
+
+	$artworks['djupivogur-mountain-painting'] = ['title' => 'Djúpivogur Mountain Painting', 
+										'date_completed' => '08/06/2013',
+										'full_url' => 'djupivogur-mountain-painting.jpg', 
+										'thumb_url' => 'djupivogur-mountain-painting-thumbnail.jpg', 
+										'alt' => 'Photo of mountain with man and a woman in Djupivogur, Iceland altered to look like a painting by Allen Garvey', 
+										'description' => 'I took this photo in Djúpivogur, Iceland. Later I used a Photoshop filter to create an impressionistic, painting effect.'];
+
+	$artworks['red-bay-landscape'] = ['title' => 'Red Bay Overlook', 
+										'date_completed' => '07/17/2013',
+										'full_url' => 'red-bay-overlook.jpg', 
+										'thumb_url' => 'red-bay-overlook-thumbnail.jpg', 
+										'alt' => 'Photo of Red Bay, Newfoundland and Labrador from Tracey Hill by Allen Garvey ', 
+										'description' => 'Photo of Red Bay, Newfoundland and Labrador from Tracey Hill'];
+
+	$artworks['forth-bridge'] = ['title' => 'Forth Bridge', 
+										'date_completed' => '08/21/2012',
+										'full_url' => 'forth-bridge.jpg', 
+										'thumb_url' => 'forth-bridge-thumbnail.jpg', 
+										'alt' => 'Photo of child in front of Forth Bridge in Queensferry, Scotland by Allen Garvey ', 
+										'description' => 'Photo of child in front of Forth Bridge in Queensferry, Scotland'];
 
 	return $artworks;
 }
