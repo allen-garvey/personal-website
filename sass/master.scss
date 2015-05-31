@@ -80,8 +80,11 @@ aside{
 .red_background{
 	background-color : lighten($red, 48%);
 }
+.cyan_background{
+	background-color : lighten($blue, 48%);
+}
 .blue_background{
-	background-color : $cyan; //lighten($blue, 48%)
+	background-color : lighten($blue, 30%);
 }
 .purple_background{
 	background-color : lighten($purple, 51%);

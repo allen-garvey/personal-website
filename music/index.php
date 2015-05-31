@@ -7,7 +7,7 @@
 	//for section header jumbotron
 	$section_header = [];
 	$section_header['title'] = 'Music';
-	$section_header['header_class'] = 'purple_background';
+	$section_header['header_class'] = 'blue_background';
 	$section_header['body'] = format_html_text("What I love about music is how it can be anything you want---from very simple to impossibly complex. 
 		I like to have a balance between preparation and spontaneity---of being able to have a general plan while still allowing the possibility of happy accidents. 
 		I like music that transcends genre, because it enables the listener to be pleasantly surprised since anything can happen");

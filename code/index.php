@@ -11,7 +11,7 @@
 	//for section header jumbotron
 	$section_header = [];
 	$section_header['title'] = 'Code';
-	$section_header['header_class'] = 'blue_background';
+	$section_header['header_class'] = 'cyan_background';
 	$section_header['body'] = format_html_text("What I enjoy about programming is that you are only limited by your own imagination. 
 		At the same time, there are pragmatic limitations that you have to overcome, as I learned after creating my first real program in Python, when I discovered how hard it would be to deploy to my family and friends. 
 		I'm also fascinated by the tension between web and native apps. While the web has almost unlimited reach, it has limited capabilities compared to native apps, while native apps will always be stuck (to an extent) on the platforms they are created for.");
