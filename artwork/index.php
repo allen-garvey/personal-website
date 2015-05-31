@@ -1,6 +1,7 @@
 <?php 
 require_once('../inc/config.php');
 require_once(ROOT_PATH.'inc/models/artwork_model.php');
+require_once(ROOT_PATH.'inc/controllers/functions.php');
 $artworks = artworks();
 
 $title = 'artwork'; //for navbar active class
