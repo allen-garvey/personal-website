@@ -262,6 +262,7 @@ nav li{
 //* Animations
 //***************************
 .explode{
+	letter-spacing: 0; //required for transition to work on firefox
 	transition:letter-spacing 1s ease-out;
 }
 .explode:hover{
