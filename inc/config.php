@@ -13,3 +13,6 @@ define("CODE_URL", BASE_URL.'code/');
 define("VIDEO_URL", BASE_URL.'video/');
 define("ARTWORK_URL", BASE_URL.'artwork/');
 define("MUSIC_URL", BASE_URL.'music/');
+
+define("ARTWORK_DETAIL_URL", ARTWORK_URL.'index.php?art='); //for local development
+//define("ARTWORK_DETAIL_URL", ARTWORK_URL.'art/'); //for web pretty url
