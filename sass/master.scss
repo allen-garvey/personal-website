@@ -91,13 +91,6 @@ aside{
 .italic{
 	font-style:italic;
 }
-.top_margin_sm{
-	margin-top : 1.5em;
-}
-.bottom_margin_sm{
-	margin-bottom:3em;
-}
-
 .top_buffer_sm{
 	margin-top: 0;
 }
@@ -105,16 +98,15 @@ aside{
 	text-align:center;
 }
 
-.top_margin_sm_max{ //so that on small screen sizes tops column groups don't bump into each other
-	margin-top: 3em;
-}
-.bottom_margin_sm_max{ 
+.bottom_margin_sm_only{ //so at small screen sizes column tops don't bump into each other
 	margin-bottom: 3em;
 }
 .sm_col_desc{ //used for p descriptions in columns so they are not separated from related pictures
 	margin-bottom:0;
 }
-
+.bottom_margin{
+	margin-bottom : 2em;
+}
 
 
 //****************classes so footer stays at bottom
@@ -280,23 +272,12 @@ nav li{
 		display: inline-block;
 		margin: 0 1em 1em 0;
 	}
-	.top_margin_sm_max{
-		margin-top: 0;
-	}
-	.bottom_margin_sm_max{
-		margin-bottom: 0;
-	}
-	.bottom_margin_sm{
-		margin-bottom: 0;
-	}
+	
 //*********** homepage logotext
 	h1.logo_text{
-		@extend %brand_font_style;
-		margin-bottom: 0em;
 		font-size: 6em;
 	}
 	.jumbotron .lead{
-		@extend %heading_font_style;
 		font-size: 1.1em;
 	}
 	.main_brand{
@@ -311,7 +292,9 @@ nav li{
 
 }
 @media(min-width: $bootstrap_3_med_device_width){
-
+	.bottom_margin_sm_only{
+		margin-bottom: 0;
+	}
 	.top_buffer_sm{
 		margin-top: $top_buffer_size;
 	}
