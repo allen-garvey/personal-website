@@ -1,6 +1,6 @@
 <?php 
 	require_once('../inc/config.php');
-	include_once(ROOT_PATH.'inc/controllers/functions.php');
+	include_once(ROOT_PATH.'inc/controllers/text_formatter.php');
 	include(ROOT_PATH.'inc/views/head.php');
 	include_once(ROOT_PATH.'inc/models/code_model.php');
 	$title = 'code'; //for nav-bar active class
@@ -12,9 +12,9 @@
 	$section_header = [];
 	$section_header['title'] = 'Code';
 	$section_header['header_class'] = 'cyan_background';
-	$section_header['body'] = format_html_text("What I enjoy about programming is that you are only limited by your own imagination. 
+	$section_header['body'] = "What I enjoy about programming is that you are only limited by your own imagination. 
 		At the same time, there are pragmatic limitations that you have to overcome, as I learned after creating my first real program in Python, when I discovered how hard it would be to deploy to my family and friends. 
-		I'm also fascinated by the tension between web and native apps. While the web has almost unlimited reach, it has limited capabilities compared to native apps, while native apps will always be stuck (to an extent) on the platforms they are created for.");
+		I'm also fascinated by the tension between web and native apps. While the web has almost unlimited reach, it has limited capabilities compared to native apps, while native apps will always be stuck (to an extent) on the platforms they are created for.";
 	$section_header['image'] = ['url' => 'portraits/allen-garvey-code-portrait.png', 'alt' => 'Self-portrait of Allen Garvey using character glyphs'];
 	include(ROOT_PATH.'inc/views/section_header.php');
 

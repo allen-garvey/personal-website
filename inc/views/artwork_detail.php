@@ -7,18 +7,17 @@
 	</div>
 </header>
 <main class='container'>
-	<div class='row top_margin_sm'>
-		<div class='col-md-6'>
+	<figure>
+		<img src='<?= IMAGE_URL.'artwork/'. $selected_artwork['full_url']; ?>' alt="<?=$selected_artwork['alt']?>" class="<?= $orientation_class ?>" />
+		<figcaption>
 			<p>
-				<?= $selected_artwork['description']; ?>
+				<?= TextFormatter::format_html_text($selected_artwork['description']); ?>
 			</p>
-			<small class='italic to_bottom'>
-				<?php $release_date = DateTime::createFromFormat('m/d/Y', $selected_artwork['date_completed']);
-				echo $release_date->format('m/d/y'); 
+			<small class='italic'>
+				<?php 
+					$release_date = DateTime::createFromFormat('m/d/Y', $selected_artwork['date_completed']);
+					echo $release_date->format('m/d/y'); 
 				?>
 			</small>
-		</div>
-		<div class='col-md-6'>
-			<img src='<?= IMAGE_URL.'artwork/'. $selected_artwork['full_url']; ?>' alt="<?=$selected_artwork['alt']?>" />
-		</div>
-	</div>
+		</figcaption>
+	</figure>
