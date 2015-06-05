@@ -16,8 +16,8 @@ This was a challenge both because of the historical accuracy required in the art
 										'date_completed' => '04/21/2015',
 										'full_url' => 'allen-garvey-jk-simmons-illustration.png', 
 										'thumb_url' => 'allen-garvey-jk-simmons-illustration-thumbnail.jpg', 
-										'alt' => 'Digital illustration of JK Simmons by Allen Garvey based on photo by Mark Mann', 
-										'description' => 'Illustration of JK Simmons based on a photo by Mark Mann',
+										'alt' => 'Digital illustration of J.K. Simmons by Allen Garvey based on photo by Mark Mann', 
+										'description' => "This picture was done for an assignment to create a recognizable illustration of a celebrity. I chose J.K. Simmons because I always enjoy his screen presence and acting skill, and because despite his recent Oscar I feel he is an underappreciated actor. Since he is equally talented at dramatic and comedic acting, early on I decided I wanted to use bold, contrasting colors to convey the wide breadth of characters he's portrayed. I started out by finding a photo that I thought captured his essence, which was taken by <a href='http://www.markmannphoto.com'>Mark Mann.</a> I then traced it using tracing paper and made a copy. On the copy I created smooth vector shapes over the soft pencil shading and scanned it in. I then traced the scan in Adobe Illustrator using black and white and shades of gray. Then I selected appropriate Pantone colors and used live paint to color it in.",
 										'orientation' => 'portrait'
 										];
 
@@ -26,16 +26,16 @@ This was a challenge both because of the historical accuracy required in the art
 										'full_url' => 'allen-garvey-bitter-polar-bear.png', 
 										'thumb_url' => 'allen-garvey-bitter-polar-bear-thumbnail.jpg', 
 										'alt' => 'Digital illustration of a bitter polar bear by Allen Garvey based on photo by Mike Reyfman', 
-										'description' => 'Illustration of a bitter polar bear based on a photo by Mike Reyfman',
+										'description' => "Inspired by the phrase bitter polar bear which popped up in a random word generator, I wanted to imagine what that would look like. After some exploratory sketches, I decided on an image somewhere between a bear growling and a baby bawling. Starting out with a polar bear photo I found by <a href='http://www.mikereyfman.com'>Mike Reyfman</a>, I made a series of sketches. I took the better half of one of the sketches, I reversed it in Photoshop to create a symmetrical drawing. I then further refined the sketch, adding more detail and asymmetry. I alternated between scanning in and tracing the sketch in Adobe Illustrator and printing it out and drawing on the printout until I was satisfied with the level of detail. I then used live paint in Illustrator to color the illustration, using tints and shades of Pantone colors.",
 										'orientation' => 'portrait'
 										];
 
-	$artworks['djupivogur-mountain-painting'] = ['title' => 'Djúpivogur Mountain Painting', 
+	$artworks['djupivogur-mountain-scene'] = ['title' => 'Djúpivogur Mountain Scene', 
 										'date_completed' => '08/06/2013',
 										'full_url' => 'djupivogur-mountain-painting.jpg', 
 										'thumb_url' => 'djupivogur-mountain-painting-thumbnail.jpg', 
-										'alt' => 'Photo of mountain with man and a woman in Djupivogur, Iceland altered to look like a painting by Allen Garvey', 
-										'description' => 'I took this photo in Djúpivogur, Iceland. Later I used a Photoshop filter to create an impressionistic, painting effect.',
+										'alt' => 'Photo of mountain with a man and a woman in the foreground in Djupivogur, Iceland altered to look like a painting by Allen Garvey', 
+										'description' => "While hiking through the hills of Djúpivogur, Iceland, there was a couple ahead of me that kept ending up in my photos. Serendipitously, the bright colors in their clothes contrasted beautifully with the surrounding landscape. I then used Photoshop's palette knife filter to create an impressionistic, painted effect.",
 										'orientation' => 'landscape'
 										];
 
@@ -52,8 +52,8 @@ This was a challenge both because of the historical accuracy required in the art
 										'date_completed' => '08/21/2012',
 										'full_url' => 'forth-bridge.jpg', 
 										'thumb_url' => 'forth-bridge-thumbnail.jpg', 
-										'alt' => 'Photo of child in front of Forth Bridge in Queensferry, Scotland by Allen Garvey ', 
-										'description' => 'Photo of child in front of Forth Bridge in Queensferry, Scotland',
+										'alt' => 'Photo of a child in front of Forth Bridge in Queensferry, Scotland by Allen Garvey ', 
+										'description' => "While waiting for the tender back to the ship in Queensferry, Scotland, a little boy wondered to the end of the dock facing the Forth Bridge. Sensing a great shot, I took the photo. Later on, I thought that making the picture black and white really emphasized the composition, as will as the theme of contrasting human fragility against a large, monolithic structure.",
 										'orientation' => 'landscape'
 										];
 
