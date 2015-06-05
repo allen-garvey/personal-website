@@ -1,7 +1,10 @@
 <?php 
 	include_once('inc/config.php');
+	include_once(ROOT_PATH.'inc/controllers/text_formatter.php');
+	include_once(ROOT_PATH.'inc/models/main_index_model.php');
 	include(ROOT_PATH.'inc/views/head.php');
 	$title = 'home'; //for nav-bar active class
+	$model = main_index_model();
 
 ?>
 <header class='jumbotron home'>
@@ -16,22 +19,22 @@
 		<div class='container about_me'>
 			<h2>Hi, I&#8217;m Allen.</h2>
 			<div class='row'>
-				<section class='col-sm-4'>
-					<p>I&#8217;m a software developer, designer and musician. As far back as I can remember I&#8217;ve always been intensely curious, which leads me to never stop learning. I believe that if you do the work and put in the time for the things that you are most passionate about, good things will come to you.</p>
+				<section class='col-md-4'>
+					<p><?= TextFormatter::format_html_text($model['main_text']); ?></p>
 				</section>
-				<section class='col-sm-4'>
+				<section class='col-md-4'>
 					<h4>Some highlights so far:</h4>
 					<ul class='highlights_list'>
-						<li>wrote and produced an opera based on <em>Brave New World</em></li>
-						<li>performed in over 50 countries on 4 continents</li>
-						<li>climbed Mt. Pahia in Bora Bora on three separate occasions</li>
-						<li>taught web development, web design and Android app development to high school and college students</li>
-						<li>had artwork chosen for the <em>2015 Stacy M. Israel Art, Architecture + Design Student Exhibition</em> at Norwalk Community College</li>
+						<?php 
+							foreach ($model['accomplishment_list'] as $accomplishment) {
+								echo '<li>'.TextFormatter::format_html_text($accomplishment).'</li>';
+							}
+						?>
 					</ul>
 				</section>
-				<div class='col-sm-4'>
+				<figure class='col-md-4'>
 					<img src="<?= BASE_URL.'images/allen1.jpg'; ?>" alt="Allen Garvey portrait illustration" height='150' width='150' />
-				</div>
+				</figure>
 			</div>
 		</div>
 	</article>
