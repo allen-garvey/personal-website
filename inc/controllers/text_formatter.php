@@ -24,6 +24,9 @@ class TextFormatter{
 	//formats text nodes in string of html but uses xpath to preserve html elements and attributes (such as links)
 	//optional argument is function used to format all text nodes in the supplied html string
 	public static function format_html_text_xpath($unformatted_text, $format_function=null){
+		if($unformatted_text === ''){ //empty strings throw errors
+			return '';
+		}
 		$format_function = !isset($format_function) ? function($text){return TextFormatter::format_html_text($text);} : $format_function;
 		libxml_use_internal_errors(TRUE); //suppresses errors in non-wellformed input
 		$dom = new DOMDocument;
