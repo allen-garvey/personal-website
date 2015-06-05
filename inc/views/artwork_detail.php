@@ -11,7 +11,7 @@
 		<img src='<?= IMAGE_URL.'artwork/'. $selected_artwork['full_url']; ?>' alt="<?=$selected_artwork['alt']?>" class="<?= $orientation_class ?>" />
 		<figcaption>
 			<p>
-				<?= TextFormatter::format_html_text($selected_artwork['description']); ?>
+				<?= TextFormatter::format_html_text_xpath($selected_artwork['description']); ?>
 			</p>
 			<small class='italic'>
 				<?php 
