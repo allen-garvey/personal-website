@@ -57,6 +57,7 @@ img{
 }
 ul{
 	list-style-type:square;
+    padding-left: 0;
 }
 
 a:link{
@@ -111,6 +112,13 @@ aside{
 	margin-bottom : 2em;
 }
 
+.half_bottom_margin{
+	margin-bottom : 1em;
+}
+
+.left_buffer_md{
+	margin-left: 0;
+}
 
 //****************classes so footer stays at bottom
 main{
@@ -300,6 +308,14 @@ nav li{
 	}
 	.top_buffer_sm{
 		margin-top: $top_buffer_size;
+	}
+
+	.pull_right_md{
+		float: right;
+	}
+
+	.left_buffer_md{
+		margin-left: 2em;
 	}
 }
 
