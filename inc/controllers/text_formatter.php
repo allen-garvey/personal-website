@@ -30,7 +30,14 @@ class TextFormatter{
 		$format_function = !isset($format_function) ? function($text){return TextFormatter::format_html_text($text);} : $format_function;
 		libxml_use_internal_errors(TRUE); //suppresses errors in non-wellformed input
 		$dom = new DOMDocument;
-		$dom->loadHTML($unformatted_text, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD); //flag so no doctype or <html> wrapper added
+		$dom->loadHTML("<div>$unformatted_text</div>", LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD); //flag so no doctype or <html> wrapper added //div required to be added so that a <p> element isn't added around the whole document
+		//added div element is now subtracted from the dom
+	    $container = $dom->getElementsByTagName('div')->item(0);
+	    $container = $container->parentNode->removeChild($container);
+	    while ($container->firstChild ) {
+	        $dom->appendChild($container->firstChild);
+	    }
+
 		$xp = new DOMXPath($dom);
 		$xpath = '//*/text()'; //selects all text nodes in document
 
