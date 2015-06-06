@@ -14,6 +14,6 @@
 <?php 
 
 foreach ($artworks as $get_url => $art) {
-	# code...
-	echo "<div class='thumbnail_container thumb_container_red'><a href='" . ARTWORK_DETAIL_URL."$get_url" . "'><img src='" . IMAGE_URL.'/artwork/thumbnails/'.$art['thumb_url'] . "' alt='$art[alt]' /></a></div>";
+	$thumbnail_url = get_thumbnail_url($art, $get_url);
+	echo "<div class='thumbnail_container thumb_container_red'><a href='" . ARTWORK_DETAIL_URL."$get_url" . "'><img src='$thumbnail_url' alt='$art[alt]' /></a></div>";
 }

@@ -8,11 +8,9 @@
 </header>
 <main class='container'>
 	<figure>
-		<img src='<?= IMAGE_URL.'artwork/'. $selected_artwork['full_url']; ?>' alt="<?=$selected_artwork['alt']?>" class="<?= $orientation_class ?>" />
+		<img src='<?= $fullsize_url; ?>' alt="<?=$selected_artwork['alt']?>" class="<?= $orientation_class ?>" />
 		<figcaption>
-			<p>
-				<?= TextFormatter::format_html_text_xpath($selected_artwork['description']); ?>
-			</p>
+			<?= TextFormatter::format_html_text_xpath($selected_artwork['description']); ?>
 			<small class='italic'>
 				<?php 
 					$release_date = DateTime::createFromFormat('m/d/Y', $selected_artwork['date_completed']);

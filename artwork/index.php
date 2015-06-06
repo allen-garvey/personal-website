@@ -6,6 +6,17 @@ $artworks = artworks();
 
 $title = 'artwork'; //for navbar active class
 
+function get_thumbnail_url($art, $get_url){
+	$thumbnail_url = isset($art['thumb_url']) ? $art['thumb_url'] : ARTWORK_IMAGE_THUMBNAIL_URL. $get_url.'-thumbnail' . $art['thumbnail_extension'];
+	return $thumbnail_url;
+}
+
+function get_fullsize_url($art, $get_url){
+	$fullsize_url = isset($art['full_url']) ? $art['full_url'] : ARTWORK_IMAGE_URL. $get_url.$art['fullsize_extension'];
+	return $fullsize_url;
+}
+
+
 include(ROOT_PATH.'inc/views/head.php');
 ?>
 	<?php 
@@ -14,7 +25,8 @@ include(ROOT_PATH.'inc/views/head.php');
 			$orientation_class = 'half_bottom_margin';
 			if($selected_artwork['orientation'] === 'portrait'){
 				$orientation_class = $orientation_class . ' pull_right_md left_buffer_md';
-			}	
+			}
+			$fullsize_url = get_fullsize_url($artworks[$_GET['art']], $_GET['art']);	
 			include(ROOT_PATH.'inc/views/artwork_detail.php');		
 		}
 		else{
