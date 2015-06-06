@@ -140,12 +140,11 @@ footer{
 	position: relative;
 }
 //********************jumbotron settings
-header.jumbotron{
+.jumbotron{
 	padding: 0 0 4em 0;
 }
 //*****************styles for section home pages
 header.section_header{
-	// padding-bottom: 8em;
 	padding-bottom: 0;
 }
 p.section_header{
@@ -237,6 +236,15 @@ nav li{
 }
 .thumbnail_container img:hover{
 	opacity : 0.5;
+}
+
+//for artwork detail pages
+a.back_link{
+	display:block;
+	margin-bottom: 1em;
+}
+.small_bottom_padding{
+	padding-bottom:1.5em;
 }
 
 //******************Code page

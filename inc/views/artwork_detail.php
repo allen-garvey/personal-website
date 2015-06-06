@@ -1,7 +1,7 @@
-<header class='jumbotron red_background'>
+<header class='jumbotron red_background small_bottom_padding'>
 	<?php include(ROOT_PATH.'inc/views/navbar.php'); ?>
 	<div class='container'>
-		<a href='<?= ARTWORK_URL ?>'>Artwork home</a>
+		<a href='<?= ARTWORK_URL ?>' class='back_link'>Artwork home</a>
 		<h1 class='section_header'><?= $selected_artwork['title']; ?></h1>
 		
 	</div>
