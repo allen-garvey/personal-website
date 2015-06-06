@@ -1,3 +1,6 @@
+<?php 
+$additional_stylesheets = isset($additional_stylesheets) ? $additional_stylesheets : '';
+ ?>
 <!DOCTYPE html><html><head>
 <meta charset='utf-8' />
 <title>Allen Garvey | Software Developer, Designer, Musician</title>
@@ -9,4 +12,5 @@
 <meta name="keywords" content="Allen Garvey Software Developer Programmer Graphic Sound Designer Musician Bassist Composer"/>
 <meta name="author" content="Allen Garvey"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<?= $additional_stylesheets; ?>
 </head>
