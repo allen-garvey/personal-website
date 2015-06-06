@@ -4,3 +4,7 @@ RewriteEngine On
 #interactive directory renamed to code
 RewriteRule ^interactive/(.*)$ /code/$1 [R=301,L]
 RewriteRule ^interactive$ /code/ [R=301,L]
+
+#clean up artwork get requests (for live website only- not for local development)
+#RewriteRule ^artwork/art/(.*)/$ /artwork/index.php?art=$1
+#RewriteRule ^artwork/art/(.*)$ /artwork/index.php?art=$1
