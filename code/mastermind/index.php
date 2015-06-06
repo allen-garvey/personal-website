@@ -8,6 +8,7 @@
 <div id="top" class="center2">
 	<script src="mastermind.js"></script>
 </div>
+<?php include(ROOT_PATH.'inc/views/footer_js.php'); ?>
 </body>
 </html>
 
