@@ -17,5 +17,8 @@ define("MUSIC_URL", BASE_URL.'music/');
 define("ARTWORK_IMAGE_URL", IMAGE_URL.'artwork/');
 define("ARTWORK_IMAGE_THUMBNAIL_URL", IMAGE_URL.'artwork/thumbnails/');
 
-define("ARTWORK_DETAIL_URL", ARTWORK_URL.'index.php?art='); //for local development
+//*******local development
+define("ARTWORK_DETAIL_URL", ARTWORK_URL.'index.php?art=');
+
+//*******namecheap
 //define("ARTWORK_DETAIL_URL", ARTWORK_URL.'art/'); //for web pretty url
