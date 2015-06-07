@@ -5,7 +5,6 @@
 	include(ROOT_PATH.'inc/views/head.php');
 	$title = 'home'; //for nav-bar active class
 	$model = main_index_model();
-	$extra_footer_scripts = "<script type='text/javascript' src='" . BASE_URL."scripts/main_sections.js';'></script>"; //so that icons and titles in the main sections trigger each other's hover states
 
 ?>
 <header class='jumbotron home'>
