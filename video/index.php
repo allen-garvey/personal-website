@@ -23,7 +23,7 @@
 		foreach ($videos as $video) {
 			$release_date = DateTime::createFromFormat('m/d/Y', $video['release_date']);
 			$formatted_release_date = $release_date->format('m/d/y');
-			echo "<section class='video_container'>" . "<h2>$video[title]</h2>" . "<iframe class='youtube' src='$video[url]' allowfullscreen></iframe>" . "<p>".TextFormatter::format_html_text($video['description'])."</p>" ."<small class='italic'>$formatted_release_date</small>" . "</section>";
+			echo "<section class='video_container'>" . "<h2>$video[title]</h2>" . "<iframe class='youtube' src='$video[url]' allowfullscreen></iframe>" . "<p>".TextFormatter::format_html_text_xpath($video['description'])."</p>" ."<small class='italic'>$formatted_release_date</small>" . "</section>";
 		}
 	 ?>
 </main>
