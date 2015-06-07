@@ -5,17 +5,16 @@ $bootstrap_3_large_device_width : 1200px;
 $footer_height: 12em;
 $sub_title_font_size : 1.1em;
 
-// $purple : #603096;
-// $purple : #62428F;
-// $blue : #2329BF;
-// $blue : #2539BF;
-// $red : #E5310C;
 $red:#E51707;
-// $cyan : #49D3E8;
 //*****colors from personal comic book cover project
 $purple : #471267;
 $blue : #0084BA;
-$cyan : #A3C6DF;
+// $cyan : #A3C6DF;
+
+$light_red : lighten($red, 48%);
+$light_blue : lighten($blue, 30%);
+$light_cyan : lighten($blue, 48%);
+$light_purple : lighten($purple, 51%);
 
 %brand_font_style{
 	font-family: "Yellowtail", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -79,16 +78,16 @@ aside{
 }
 
 .red_background{
-	background-color : lighten($red, 48%);
+	background-color : $light_red;
 }
 .cyan_background{
-	background-color : lighten($blue, 48%);
+	background-color : $light_cyan;
 }
 .blue_background{
-	background-color : lighten($blue, 30%);
+	background-color : $light_blue;
 }
 .purple_background{
-	background-color : lighten($purple, 51%);
+	background-color : $light_purple;
 }
 
 //*****************general helper classes
@@ -176,10 +175,19 @@ header.home{
 .main_brand{
 	margin-top: 4em;
 }
-//*************homepage styles
-.icon{
-	max-height: 50px;
-	max-width: 50px;
+//*************homepage sections styles
+//redundant hover classes art uses for js when hovered over title instead of icon
+svg.code_icon:hover,svg.code_icon_hover{
+	fill: $light_cyan;
+}
+svg.music_icon:hover,svg.music_icon_hover{
+	fill: $blue;
+}
+svg.artwork_icon:hover,svg.artwork_icon_hover{
+	fill: $red;
+}
+svg.video_icon:hover,svg.video_icon_hover{
+	fill: $light_purple;
 }
 
 //*************homepage about me section
@@ -283,7 +291,7 @@ iframe.music_player{
 	letter-spacing: 0; //required for transition to work on firefox
 	transition:letter-spacing 1s ease-out;
 }
-.explode:hover{
+.explode:hover, .exploded{ //redundant style used so that icon can trigger hover style
 	letter-spacing: 0.5em;
 	-webkit-font-variant-ligatures: no-common-ligatures;
 }

@@ -5,8 +5,9 @@
 	$i = 0;
 	$sections_per_row = 2;
 
-	foreach ($sections as $section) {
+	foreach ($sections as $name => $section) {
 		$row_class = 'row';
+		$row_id = strtolower($name);
 		$section_class = 'col-sm-6 bottom_margin_sm_only';
 
 		if(($i !== 0) && ($i % $sections_per_row === 0)){
