@@ -3,6 +3,7 @@
 	include(ROOT_PATH.'inc/views/head.php');
 	include_once(ROOT_PATH.'inc/controllers/text_formatter.php');
 	$title = 'error'; //for nav-bar active class
+	$extra_footer_scripts = "<script type='text/javascript' src='" . BASE_URL."scripts/main_sections.js';'></script>"; //so that icons and titles in the main sections trigger each other's hover states
 ?>
 <header class='jumbotron red_background'>
 <?php include(ROOT_PATH.'inc/views/navbar.php'); ?>
