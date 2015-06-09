@@ -51,6 +51,9 @@ h2{
 h3{
 	font-size: 1.777em;
 }
+h4{
+	font-size: 1.333em;
+}
 img{
 	max-width: 100%;
 }
@@ -191,6 +194,9 @@ svg.video_icon:hover,svg.video_icon_hover{
 }
 
 //*************homepage about me section
+.highlights_section{
+	margin-top: 2em;
+}
 .highlights_list li{
 	margin-top: 0.6em;
 }
@@ -338,6 +344,10 @@ iframe.music_player{
 
 	.left_buffer_md{
 		margin-left: 2em;
+	}
+	//used for homepage highlights list so it will match the height of the h2
+	.highlights_section{
+		margin-top: 2.369em - 1.333em;
 	}
 }
 

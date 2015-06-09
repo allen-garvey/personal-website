@@ -17,13 +17,13 @@
 <main>
 	<article class='jumbotron about'>
 		<div class='container about_me'>
-			<h2>Hi, I&#8217;m Allen.</h2>
 			<div class='row'>
 				<section class='col-md-4'>
+					<h2>Hi, I&#8217;m Allen.</h2>
 					<p><?= TextFormatter::format_html_text($model['main_text']); ?></p>
 				</section>
-				<section class='col-md-4'>
-					<h4>Some highlights so far:</h4>
+				<section class='col-md-4 highlights_section'>
+					<h4>Some highlights:</h4>
 					<ul class='highlights_list'>
 						<?php 
 							foreach ($model['accomplishment_list'] as $accomplishment) {
