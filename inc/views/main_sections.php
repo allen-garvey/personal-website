@@ -1,7 +1,8 @@
 <?php 
 	include_once(ROOT_PATH.'inc/models/sections_model.php');
 	//so that icons and titles in the main sections trigger each other's hover states
-	$extra_footer_scripts = isset($extra_footer_scripts) ? $extra_footer_scripts . "<script type='text/javascript' src='" . BASE_URL."scripts/main_sections.js';'></script>" : "<script type='text/javascript' src='" . BASE_URL."scripts/main_sections.js';'></script>";
+	$main_sections_script_tag = "<script type='text/javascript' src='" . BASE_URL."scripts/main_sections.js'></script>";
+	$extra_footer_scripts = isset($extra_footer_scripts) ? $extra_footer_scripts . $main_sections_script_tag : $main_sections_script_tag;
 	$sections = sections_model();
 	
 	$i = 0;
