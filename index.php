@@ -1,7 +1,7 @@
 <?php 
 	include_once('inc/config.php');
 	include_once(ROOT_PATH.'inc/controllers/text_formatter.php');
-	include_once(ROOT_PATH.'inc/models/main_index_model.php');
+	include_once(ROOT_PATH.'inc/models/homepage_model.php');
 	include(ROOT_PATH.'inc/views/head.php');
 	$title = 'home'; //for nav-bar active class
 	$model = main_index_model();
