@@ -261,6 +261,56 @@ a.back_link{
 	padding-bottom:1.5em;
 }
 
+//*********************************
+//**Artwork detail carousel theme**
+//*********************************
+
+.carousel-caption{
+	position: static;
+	margin: 0 auto;
+	text-shadow: none;
+	color: black;
+}
+
+//sass headings(all) should work
+.carousel-caption *{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.carousel-indicators{
+	bottom: -2em;
+}
+.carousel-indicators li, .carousel-indicators .active{
+	margin-right: 3em;
+}
+.carousel-indicators li:last-of-type{
+	margin-right:0; //so that indicators will be centered
+}
+.carousel-indicators li {
+	width: 20px;
+	height: 20px;
+	border: 1px solid rgb(0,0,0);
+	border: 1px solid rgba(0,0,0, 0.6);
+	border-radius: 6px;
+	background-color: black;
+	opacity: 0.2;
+}
+.carousel-indicators li:hover {
+	opacity: 0.6;	
+}
+.carousel-indicators .active {
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  border: 4px solid darken($red, 10%);
+  opacity: 1;
+  background-color: transparent;
+}
+.carousel-indicators .active:hover {
+  opacity: 1;
+}
+
 //******************Code page
 .code_link figure{
 	display:inline-block;

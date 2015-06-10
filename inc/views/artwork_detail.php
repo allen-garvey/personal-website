@@ -8,7 +8,14 @@
 </header>
 <main class='container'>
 	<figure>
+		<?php 
+			if(isset($selected_artwork['carousel'])){
+				include(ROOT_PATH.'inc/views/art_detail_carousel.php');
+			}
+			else{
+		 ?>
 		<img src='<?= $fullsize_url; ?>' alt="<?=$selected_artwork['alt']?>" class="<?= $orientation_class ?>" />
+		<?php }//end else block if not carousel ?>
 		<figcaption>
 			<?= TextFormatter::format_html_text_xpath($selected_artwork['description']); ?>
 			<small class='italic'>
