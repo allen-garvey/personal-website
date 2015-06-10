@@ -3,17 +3,14 @@
 	include(ROOT_PATH.'inc/views/head.php');
 	include_once(ROOT_PATH.'inc/controllers/text_formatter.php');
 	include_once(ROOT_PATH.'inc/models/video_model.php');
+	include_once(ROOT_PATH.'inc/models/section_homepages_model.php');
 	$title = 'video'; //for nav-bar active class
 
 	//video model
 	$videos = videos();
 
 	//for section header jumbotron
-	$section_header = [];
-	$section_header['title'] = 'Video';
-	$section_header['header_class'] = 'purple_background';
-	$section_header['body'] = "I think that music is an integral part of movies and games, and my favorites always have great soundtracks. What I find most intriguing is how music can enhance drama and continuity, or even create it. Imagine what Star Wars, Inception, Halo, Bioshock, or The Last of Us would be like <em>without</em> music.";
-	$section_header['image'] = ['url' => 'portraits/allen-garvey-video-portrait.gif', 'alt' => 'Low-res bitmap photo self-portrait of Allen Garvey'];
+	$section_header = video_homepage_header();
 	include(ROOT_PATH.'inc/views/section_header.php');
 
 ?>
