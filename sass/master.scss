@@ -265,11 +265,15 @@ a.back_link{
 //**Artwork detail carousel theme**
 //*********************************
 
+.carousel{
+	margin-bottom: 6em;
+}
 .carousel-caption{
 	position: static;
 	margin: 0 auto;
 	text-shadow: none;
 	color: black;
+	padding-bottom: 0;
 }
 
 //sass headings(all) should work
@@ -279,7 +283,9 @@ a.back_link{
 }
 
 .carousel-indicators{
-	bottom: -2em;
+	bottom: -4em;
+	width: 100%;
+	margin-left: -50%;
 }
 .carousel-indicators li, .carousel-indicators .active{
 	margin-right: 3em;
