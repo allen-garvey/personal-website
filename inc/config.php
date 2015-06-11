@@ -1,8 +1,11 @@
 <?php
 
-define("HOST_ENVIRONMENT", "local");
+define("ENVIRONMENT_LOCAL", 0);
+define("ENVIRONMENT_NAMECHEAP", 1);
 
-if(HOST_ENVIRONMENT === 'production'){
+define("ENVIRONMENT_CURRENT", ENVIRONMENT_LOCAL);
+
+if(ENVIRONMENT_CURRENT === ENVIRONMENT_NAMECHEAP){
 	//******config to run on namecheap
 	define("BASE_URL","http://allengarvey.com/");
 	define("ROOT_PATH",$_SERVER["DOCUMENT_ROOT"] . "/");
@@ -22,7 +25,7 @@ define("MUSIC_URL", BASE_URL.'music/');
 define("ARTWORK_IMAGE_URL", IMAGE_URL.'artwork/');
 define("ARTWORK_IMAGE_THUMBNAIL_URL", IMAGE_URL.'artwork/thumbnails/');
 
-if(HOST_ENVIRONMENT === 'production'){
+if(ENVIRONMENT_CURRENT === ENVIRONMENT_NAMECHEAP){
 	//*******namecheap
 	define("ARTWORK_DETAIL_URL", ARTWORK_URL.'art/'); //for web pretty url
 }
