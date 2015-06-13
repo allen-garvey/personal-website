@@ -1,8 +1,8 @@
-<div id="art-detail-carousel" class="carousel slide <?= $orientation_class; ?>" data-ride="carousel" data-interval="false">
+<div id="art-detail-carousel" class="carousel slide <?= $selected_artwork->imageContainerClass(); ?>" data-ride="carousel" data-interval="false">
   <div class="carousel-inner" role="listbox">
     <?php 
     	$count = 0;
-    	foreach ($selected_artwork['carousel'] as $art) {
+    	foreach ($selected_artwork->carouselData() as $art) {
     ?>
 
 	<div class="item <?php if($count===0){echo 'active';} ?>">
