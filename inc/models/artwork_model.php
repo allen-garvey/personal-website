@@ -2,6 +2,8 @@
 //unless otherwise specified, fullsize is assumed to be in images/artwork/$get_url . $fullsize_extension and 
 //thumbnails at images/artwork/thumbnails/$get_url . '-thumbnail' . $fullsize_extension
 //add 'full_url' and 'thumb_url' keys if you don't want this behavior
+require_once(ROOT_PATH.'inc/models/code_model.php');
+
 function artworks(){
 	//key also used to generate get url
 	$artworks = [];
@@ -58,9 +60,9 @@ This was a challenge both because of the historical accuracy required in the art
 										'date_completed' => '2015&ndash;',
 										'thumbnail_extension' => '.png',
 										'alt' => 'Thumbnails of assorted app icons by Allen Garvey', 
-										'description' => "<p>When creating the icon for my app <a href='" . CODE_URL . "perfect-pitch-trainer/'>Perfect Pitch Trainer,</a> I knew that the icon would have to be based around type, because ear training is an abstract concept. I used the two 'P's from the title as the basis for my icon. I modified the counters to suggest a harp and changed the size of the two letters to suggest a teacher-student relationship. The circle around the letters is meant to suggest that the whole environment is a place for learning, or perhaps that the app is a bubble, creating a safe space for learning.</p>
-														<p>For my iPhone and Mac app <a href='https://github.com/allen-garvey/countdowner/'>Countdowner</a>, I had originally thought of using the omega symbol as the icon because it is about looking towards the end of something, since it counts down to a given date. I thought about how time passing is made of discrete seconds like sand in an hourglass, so I decided to represent that by using different sized circles. I left part of the outline unfinished to suggest a few different things: that either time is always slipping away and you can't finish what you have started, or that you still have some time left because the hourglass isn't yet full.</p>
-														<p>While designing the logo for my Mac app <a href='https://github.com/allen-garvey/ruby-launcher/'>Ruby Launcher</a>, I wanted to created something that was recognizably connected to the Ruby language logo, without being too derivative. Originally, I decided to simplify it, and create a flat, geometric design. I ended up using a filter that suggests that the icon is made of construction paper, as this really reflects the app's function, which is to run the user's home-made Ruby programs.</p>
+										'description' => "<p>When creating the icon for my app <a href='" . code_model()['perfect-pitch-trainer']['link'] . "'>Perfect Pitch Trainer,</a> I knew that the icon would have to be based around type, because ear training is an abstract concept. I used the two 'P's from the title as the basis for my icon. I modified the counters to suggest a harp and changed the size of the two letters to suggest a teacher-student relationship. The circle around the letters is meant to suggest that the whole environment is a place for learning, or perhaps that the app is a bubble, creating a safe space for learning.</p>
+														<p>For my iPhone and Mac app <a href='" . code_model()['countdowner']['link'] ."'>Countdowner</a>, I had originally thought of using the omega symbol as the icon because it is about looking towards the end of something, since it counts down to a given date. I thought about how time passing is made of discrete seconds like sand in an hourglass, so I decided to represent that by using different sized circles. I left part of the outline unfinished to suggest a few different things: that either time is always slipping away and you can't finish what you have started, or that you still have some time left because the hourglass isn't yet full.</p>
+														<p>While designing the logo for my Mac app <a href='" . code_model()['ruby-launcher']['link'] . "'>Ruby Launcher</a>, I wanted to created something that was recognizably connected to the Ruby language logo, without being too derivative. Originally, I decided to simplify it, and create a flat, geometric design. I ended up using a filter that suggests that the icon is made of construction paper, as this really reflects the app's function, which is to run the user's home-made Ruby programs.</p>
 														<p>While creating an icon for an Android app about famous athletes, I knew I wanted to incorporate Futurism in some way. I used a Futurist sculpture of a man running as a basis for my design, and simplified it down until it started to look like a capital 'A'. I really wanted the shape to 'pop' and convey strength, boldness and speed, so I used lots of sharp angles and multiple outlines to achieve this.</p>
 														<p>When I was designing an icon for an Android app that compares different country's income tax rates, I was initially at a loss for what to do. After much brainstorming, I came up with the idea that the user might be 'investigating' different tax rates, like a detective, and the concept for the icon came together after that. I used the color green and a decorative art-deco like font to allude to the type style on money.</p>
 														<p>When I was making an icon for a taxi fare calculator app, I wanted something to evoke friendliness and customer service. I used the color yellow since it is a common color for taxis and chose a rounded sans-serif font and rounded rectangle because their curves convey warmth. The rotated letter 'I' can be construed as the idea of the taxi moving forward, or someone holding out their arm to hail a taxi.</p>",
@@ -80,8 +82,8 @@ This was a challenge both because of the historical accuracy required in the art
 										'date_completed' => '12/14/2014',
 										'fullsize_extension' => '.svg',
 										'thumbnail_extension' => '.svg', 
-										'full_url' => ARTWORK_IMAGE_URL.'think-logo.svg', 
-										'thumb_url' => ARTWORK_IMAGE_URL.'think-logo.svg', 
+										'full_url' => ARTWORK_IMAGE_URL.'/think-logo/think-logo.svg', 
+										'thumb_url' => ARTWORK_IMAGE_URL.'/think-logo/think-logo.svg', 
 										'alt' => 'Wordmark for think, a sophisticated urban tattoo shop, by Allen Garvey', 
 										'description' => "<p>The goal of this project was to create a wordmark to represent thINK, a fictional sophisticated urban tattoo shop targeting the general public.</p>
 														<p>I started out on the computer to get an idea of the shapes of the letterforms. I was drawn to Didot, because I think that modern serif fonts have connotations of sophistication. I also thought about using typographic symbols to use as a dot for the letter I as a distinctive mark. I thought the Helvetica asterisk was both simple and paired well with Didot and looked like a simplified human body, which is what tattooing is all about.
@@ -90,9 +92,9 @@ This was a challenge both because of the historical accuracy required in the art
 														<p>After looking over my final design, I think the ascending letter heights draw your eye from left to right, and the middle asterisk adds balance to the design, as well as creating possibilities for it to be used as a stand-alone mark or symbol. The uneven letter heights also create a sense of interest and make the logo more distinctive.</p>",
 										'orientation' => 'portrait',
 										'carousel' => [
-											['image_url' => ARTWORK_IMAGE_URL.'think-logo.svg', 'alt' => 'Wordmark for think, a sophisticated urban tattoo shop, by Allen Garvey'],
-											['image_url' => ARTWORK_IMAGE_URL.'think-logo1.jpg', 'alt' => 'Initial explorations for think wordmark', 'caption' => '<p>Initial explorations</p>'],
-											['image_url' => ARTWORK_IMAGE_URL.'think-logo2.png', 'alt' => 'Alternate candidates for think logo', 'caption' => '<p>Alternative candidates for the mark</p>']
+											['image_url' => ARTWORK_IMAGE_URL.'/think-logo/think-logo.svg', 'alt' => 'Wordmark for think, a sophisticated urban tattoo shop, by Allen Garvey'],
+											['image_url' => ARTWORK_IMAGE_URL.'/think-logo/think-logo1.jpg', 'alt' => 'Initial explorations for think wordmark', 'caption' => '<p>Initial explorations</p>'],
+											['image_url' => ARTWORK_IMAGE_URL.'/think-logo/think-logo2.png', 'alt' => 'Alternate candidates for think logo', 'caption' => '<p>Alternative candidates for the mark</p>']
 										]
 										];
 
