@@ -64,7 +64,12 @@ class ArtworkController{
 
 	public function releaseDate(){
 		$release_date = DateTime::createFromFormat('m/d/Y', $this->artwork['date_completed']);
-		return $release_date->format('m/d/y');
+		if(is_object($release_date)){
+			//in case create date fails because date_completed is in a different format
+			return $release_date->format('m/d/y');
+		}
+		return $this->artwork['date_completed'];
+
 	}
 
 	public function carouselData(){
