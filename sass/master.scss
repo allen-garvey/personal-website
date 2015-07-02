@@ -1,5 +1,8 @@
 @import 'bootstrap-theme-navbar';
 
+/*
+* Layout sizes
+*/
 $top_buffer_size : 6em;
 $bootstrap_3_small_device_width : 768px;
 $bootstrap_3_med_device_width : 992px;
@@ -7,6 +10,9 @@ $bootstrap_3_large_device_width : 1200px;
 $footer_height: 12em;
 $sub_title_font_size : 1.1em;
 
+/*
+* Colors
+*/
 $red:#E51707;
 //*****colors from personal comic book cover project
 $purple : #471267;
@@ -18,10 +24,12 @@ $light_blue : lighten($blue, 30%);
 $light_cyan : lighten($blue, 48%);
 $light_purple : lighten($purple, 51%);
 
+/*
+* Fonts
+*/
 %brand_font_style{
 	font-family: "Yellowtail", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 %heading_font_style{
 	font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 300;
@@ -30,7 +38,9 @@ $light_purple : lighten($purple, 51%);
 	font-family: "Book Antiqua", "Palatino Linotype", Palatino, Georgia, serif;
 }
 
-//***********Base styles
+/*
+* Base styles
+*/
 html,body{
 	height: 100%;
 }
@@ -63,10 +73,9 @@ svg{
 	max-height: 100%; //for possible svg bug in safari
 }
 ul{
-	list-style-type:square;
+	list-style-type:none;
     padding-left: 0;
 }
-
 a:link{
 	color : $blue;
 }
@@ -79,12 +88,10 @@ a:hover{
 a:active{
 	color: $red;
 }
-
 aside{
 	margin-bottom:0.5em;
 	opacity:0.75;
 }
-
 .red_background{
 	background-color : $light_red;
 }
@@ -98,7 +105,9 @@ aside{
 	background-color : $light_purple;
 }
 
-//*****************general helper classes
+/*
+* General helper classes
+*/
 .italic{
 	font-style:italic;
 }
@@ -127,7 +136,23 @@ aside{
 	margin-left: 0;
 }
 
-//****************classes so footer stays at bottom
+
+//for list bullets that don't bump into the margin at small sizes
+//used on homepage for highlights list
+.bullets li:before{
+	content: "";
+	width: 4px;
+	height: 4px;
+	background-color: black;
+	position: absolute;
+	left: 4px;
+	margin-top: 8px;
+}
+
+/*
+* Footer styles
+* so footer is always at the the bottom of the page no matter how much content there is
+*/
 main{
 	//bottom padding is height of footer so it stays on bottom
 	padding: 0 0 $footer_height 0;
@@ -146,11 +171,17 @@ footer{
 	min-height: 100%;
 	position: relative;
 }
-//********************jumbotron settings
+
+/*
+* jumbotron styles
+*/
 .jumbotron{
 	padding: 0 0 4em 0;
 }
-//*****************styles for section home pages
+
+/*
+* Section home page styles
+*/
 header.section_header{
 	padding-bottom: 0;
 }
@@ -160,8 +191,9 @@ p.section_header{
 	line-height: 1.6em;
 }
 
-
-//***************home page logo text
+/*
+* Home page jumbotron/logo styles
+*/
 h1.logo_text{
 	@extend %brand_font_style;
 	margin-bottom: 0em;
@@ -183,8 +215,11 @@ header.home{
 .main_brand{
 	margin-top: 4em;
 }
-//*************homepage sections styles
-//redundant hover classes art uses for js when hovered over title instead of icon
+
+/*
+* Home page section links icon styles
+* redundant hover classes art uses for js when hovered over title instead of icon
+*/
 svg.code_icon:hover,svg.code_icon_hover{
 	fill: $light_cyan;
 }
@@ -198,7 +233,9 @@ svg.video_icon:hover,svg.video_icon_hover{
 	fill: $light_purple;
 }
 
-//*************homepage about me section
+/*
+* Home page about me styles
+*/
 .highlights_section{
 	margin-top: 2em;
 }
@@ -215,7 +252,9 @@ svg.video_icon:hover,svg.video_icon_hover{
 	margin-bottom: 5em;
 }
 
-//******************** navbar styles
+/*
+* Navbar styles
+*/
 .navbar-brand{
 	@extend %brand_font_style;
 	font-size: 1.5em;
@@ -224,7 +263,9 @@ nav li{
 	@extend %heading_font_style;
 }
 
-//*************Video page
+/*
+* Video page styles
+*/
 .youtube{
 	width : 100%;
 	height : 360px;
@@ -236,7 +277,9 @@ nav li{
 	max-width: 640px;
 }
 
-//***************Artwork page
+/*
+* Artwork homepage styles
+*/
 .thumbnail_container{
 	max-width: 256px;
 	max-height: 256px;
@@ -322,7 +365,9 @@ a.back_link{
   opacity: 1;
 }
 
-//******************Code page
+/*
+* Code home page styles
+*/
 .code_link figure{
 	display:inline-block;
 	margin-bottom:1em;
@@ -345,7 +390,9 @@ a.back_link{
 	opacity : 0.5;
 }
 
-//*******************Music page
+/*
+* Music home page styles
+*/
 iframe.music_player{
 	width: 100%;
 	height: 150px;
@@ -373,7 +420,9 @@ iframe.music_player{
 		margin: 0 1em 1em 0;
 	}
 	
-//*********** homepage logotext
+/*
+* Home page logo/jumbotron styles
+*/
 	h1.logo_text{
 		font-size: 6em;
 	}
@@ -413,7 +462,9 @@ iframe.music_player{
 }
 
 @media (min-width: $bootstrap_3_large_device_width) {
-	//***************Base styles
+	/*
+	* base styles
+	*/
 	.jumbotron h1{
 		font-size: 4em;
 	}

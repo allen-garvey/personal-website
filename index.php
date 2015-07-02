@@ -24,7 +24,7 @@
 				</section>
 				<section class='col-md-4 highlights_section'>
 					<h4>Some highlights:</h4>
-					<ul class='highlights_list'>
+					<ul class='highlights_list bullets'>
 						<?php 
 							foreach ($model['accomplishment_list'] as $accomplishment) {
 								echo '<li>'.TextFormatter::format_html_text($accomplishment).'</li>';
