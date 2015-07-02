@@ -3,7 +3,7 @@
 define("ENVIRONMENT_LOCAL", 0);
 define("ENVIRONMENT_NAMECHEAP", 1);
 
-define("ENVIRONMENT_CURRENT", ENVIRONMENT_LOCAL);
+require_once('current_environment.php');
 
 if(ENVIRONMENT_CURRENT === ENVIRONMENT_NAMECHEAP){
 	//******config to run on namecheap
