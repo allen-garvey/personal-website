@@ -5,9 +5,9 @@ RewriteEngine On
 RewriteRule ^interactive/(.*)$ /code/$1 [R=301,L]
 RewriteRule ^interactive$ /code/ [R=301,L]
 
-#clean up artwork get requests (for live website only- not for local development)
-#RewriteRule ^artwork/art/(.*)/$ /artwork/index.php?art=$1
-#RewriteRule ^artwork/art/(.*)$ /artwork/index.php?art=$1
+#clean up artwork get requests (for live website only- local development will still use query strings)
+RewriteRule ^artwork/art/(.*)/$ /artwork/index.php?art=$1
+RewriteRule ^artwork/art/(.*)$ /artwork/index.php?art=$1
 
 #redirect h-news link
 RewriteRule ^code/h-news(/)?$ http://hnews.co [R=301,L]
