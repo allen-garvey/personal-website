@@ -4,7 +4,7 @@
 function code_model(){
 	$code_model = [];
 	
-	$code_model['n-news'] = ['title' => 'H-News', 'link' => 'http://hnews.co', 'release_date' => '06/28/2015', 'icon_url' => 'h-news-icon.svg', 
+	$code_model['h-news'] = ['title' => 'H-News', 'link' => 'http://hnews.co', 'release_date' => '06/28/2015', 'icon_url' => 'h-news-icon.svg', 
 					'blurb' => "A redesign of <a href='http://news.ycombinator.com'>Hacker News</a> with an emphasis on mobile first design and usability. Uses the official Hacker News API for story data and jQuery to populate the page with stories using AJAX."];
 	
 	$code_model['annuncified'] = ['title' => 'Annuncified', 'link' => 'https://github.com/allen-garvey/annuncified', 'release_date' => '05/19/2015', 'icon_url' => 'annuncified-icon.png', 
