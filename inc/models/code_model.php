@@ -4,6 +4,9 @@
 function code_model(){
 	$code_model = [];
 	
+	$code_model['wordpop'] = ['title' => 'Wordpop', 'link' => 'https://github.com/allen-garvey/wordpop-node', 'release_date' => '08/15/2015', 'icon_url' => 'wordpop-icon.png', 
+					'blurb' => "I wanted some practice in data visualization and creating infographics, so I created this web app using d3.js and node.js to dynamically display word frequencies in Craigslist listings in scatterplot and bar graph formats."];
+
 	$code_model['h-news'] = ['title' => 'H-News', 'link' => 'http://hnews.co', 'release_date' => '06/28/2015', 'icon_url' => 'h-news-icon.svg', 
 					'blurb' => "A redesign of <a href='http://news.ycombinator.com'>Hacker News</a> with an emphasis on mobile first design and usability. Uses the official Hacker News API for story data and jQuery to populate the page with stories using AJAX."];
 	
