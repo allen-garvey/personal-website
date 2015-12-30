@@ -3,17 +3,18 @@
 define("ENVIRONMENT_LOCAL", 0);
 define("ENVIRONMENT_NAMECHEAP", 1);
 
-require_once('current_environment.php');
+define('ROOT_PATH', dirname(__FILE__, 2).'/');
+define('INC_PATH', ROOT_PATH.'inc/');
+
+require_once(INC_PATH.'current_environment.php');
 
 if(ENVIRONMENT_CURRENT === ENVIRONMENT_NAMECHEAP){
 	//******config to run on namecheap
 	define("BASE_URL","http://allengarvey.com/");
-	define("ROOT_PATH",$_SERVER["DOCUMENT_ROOT"] . "/");
 }
 else{
 	//******config to run on localhost
 	define("BASE_URL","/Websites/allen_garvey_2/");
-	define("ROOT_PATH",$_SERVER["DOCUMENT_ROOT"] . "/Websites/allen_garvey_2/");	
 }
 
 define("IMAGE_URL", BASE_URL.'images/');
