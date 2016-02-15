@@ -1,0 +1,23 @@
+{
+  "name": "allen-garvey-personal-website-2",
+  "version": "1.0.0",
+  "description": "Second version of the personal website for Allen Garvey",
+  "main": "public_html/index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allen-garvey/personal-website.git"
+  },
+  "author": "Allen Garvey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/allen-garvey/personal-website/issues"
+  },
+  "homepage": "http://allengarvey.com",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.2.0"
+  }
+}
