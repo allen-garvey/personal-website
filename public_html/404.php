@@ -1,11 +1,11 @@
 <?php 
-	require_once('inc/config.php');
-	include(ROOT_PATH.'inc/views/head.php');
-	include_once(ROOT_PATH.'inc/controllers/text_formatter.php');
+	require_once('../inc/config.php');
+	include(INC_PATH.'views/head.php');
+	include_once(INC_PATH.'controllers/text_formatter.php');
 	$title = 'error'; //for nav-bar active class
 ?>
 <header class='jumbotron red_background'>
-<?php include(ROOT_PATH.'inc/views/navbar.php'); ?>
+<?php include(INC_PATH.'views/navbar.php'); ?>
 <div class='container'>
 	<h1 class=''>Yikes!</h1>
 	<p class='lead'><?=  TextFormatter::format_html_text("It appears that the page you are looking for has moved or doesn't exist.") ?></p>
@@ -13,6 +13,6 @@
 </div>
 </header>
 <main class='container'>
-	<?php include(ROOT_PATH.'inc/views/main_sections.php'); ?>
+	<?php include(INC_PATH.'views/main_sections.php'); ?>
 </main>
-<?php include(ROOT_PATH.'inc/views/footer.php'); ?>
+<?php include(INC_PATH.'views/footer.php'); ?>

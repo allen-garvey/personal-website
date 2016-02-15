@@ -1,14 +1,14 @@
 <?php 
-	require_once('../inc/config.php');
-	require_once(ROOT_PATH.'inc/controllers/text_formatter.php');
-	include(ROOT_PATH.'inc/views/head.php');
-	include_once(ROOT_PATH.'inc/models/section_homepages_model.php');
+	require_once('../../inc/config.php');
+	require_once(INC_PATH.'controllers/text_formatter.php');
+	include(INC_PATH.'views/head.php');
+	include_once(INC_PATH.'models/section_homepages_model.php');
 	$title = 'music'; //for nav-bar active class
 
 	//for section header jumbotron
 	$section_header = music_homepage_header();
 	
-	include(ROOT_PATH.'inc/views/section_header.php');
+	include(INC_PATH.'views/section_header.php');
 ?>
 
 <main class='container'>
@@ -16,4 +16,4 @@
 </main>
 
 
-<?php include(ROOT_PATH.'inc/views/footer.php'); ?>
+<?php include(INC_PATH.'views/footer.php'); ?>

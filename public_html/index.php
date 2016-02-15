@@ -1,14 +1,14 @@
 <?php 
-	include_once('inc/config.php');
-	include_once(ROOT_PATH.'inc/controllers/text_formatter.php');
-	include_once(ROOT_PATH.'inc/models/homepage_model.php');
-	include(ROOT_PATH.'inc/views/head.php');
+	include_once('../inc/config.php');
+	include_once(INC_PATH.'controllers/text_formatter.php');
+	include_once(INC_PATH.'models/homepage_model.php');
+	include(INC_PATH.'views/head.php');
 	$title = 'home'; //for nav-bar active class
 	$model = main_index_model();
 
 ?>
 <header class='jumbotron home'>
-	<?php include(ROOT_PATH.'inc/views/navbar.php'); ?>
+	<?php include(INC_PATH.'views/navbar.php'); ?>
 	<div class='container main_brand'>
 		<h1 class='logo_text'>Allen Garvey</h1>
 		<p class='lead'>Software Developer, Designer, Musician</p>
@@ -40,8 +40,8 @@
 	</article>
 	<article class='container'>
 		<?php 
-			include_once(ROOT_PATH.'inc/views/main_sections.php');
+			include_once(INC_PATH.'views/main_sections.php');
 	 	?>
 	</article>
 </main>
-<?php include(ROOT_PATH.'inc/views/footer.php'); ?>
+<?php include(INC_PATH.'views/footer.php'); ?>

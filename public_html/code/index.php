@@ -1,9 +1,9 @@
 <?php 
-	require_once('../inc/config.php');
-	include_once(ROOT_PATH.'inc/controllers/text_formatter.php');
-	include(ROOT_PATH.'inc/views/head.php');
-	include_once(ROOT_PATH.'inc/models/code_model.php');
-	include_once(ROOT_PATH.'inc/models/section_homepages_model.php');
+	require_once('../../inc/config.php');
+	include_once(INC_PATH.'controllers/text_formatter.php');
+	include(INC_PATH.'views/head.php');
+	include_once(INC_PATH.'models/code_model.php');
+	include_once(INC_PATH.'models/section_homepages_model.php');
 	$title = 'code'; //for nav-bar active class
 	$code_model = code_model();
 
@@ -11,7 +11,7 @@
 
 	//for section header jumbotron
 	$section_header = code_homepage_header();
-	include(ROOT_PATH.'inc/views/section_header.php');
+	include(INC_PATH.'views/section_header.php');
 
 ?>
 
@@ -38,4 +38,4 @@
 		?>
 	</div>
 </main>
-<?php include(ROOT_PATH.'inc/views/footer.php'); ?>
+<?php include(INC_PATH.'views/footer.php'); ?>

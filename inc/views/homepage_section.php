@@ -5,7 +5,7 @@
 			<p class='sm_col_desc'><?= $section['description']; ?></p>
 		</div>
 		<div class='col-sm-6'>
-			<a href="<?= $section['link']; ?>"><?php include(ROOT_PATH.'images/'. $section['icon_url']); ?></a>
+			<a href="<?= $section['link']; ?>"><?php include(IMAGE_PATH. $section['icon_url']); ?></a>
 		</div>
 	</div>
 </section>
