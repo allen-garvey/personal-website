@@ -20,3 +20,4 @@
 *.svg
 lib/*
 stylesheets/*
+inc/current_environment.php
