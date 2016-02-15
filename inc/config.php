@@ -13,6 +13,7 @@ else{
 	//******config to run on localhost
 	define("BASE_URL","http://localhost/Websites/allen_garvey_2/public_html/");
 }
+define("SCRIPTS_URL", BASE_URL.'scripts/');
 define("IMAGE_PATH", ROOT_PATH.'public_html/images/');
 define("IMAGE_URL", BASE_URL.'images/');
 define("CODE_URL", BASE_URL.'code/');
