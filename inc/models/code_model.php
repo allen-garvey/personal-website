@@ -22,7 +22,7 @@ function code_model(){
 	// $code_model['ruby-launcher'] = ['title' => 'Ruby Launcher', 'link' => 'https://github.com/allen-garvey/ruby-launcher/', 'release_date' => '01/12/2015', 'icon_url' => 'ruby-launcher-icon.png', 
 	// 				'blurb' => "While learning Ruby, I wanted to easily launch my Ruby programs from the Finder. Similar to the Python Launcher, this native Mac app is a Swift/Cocoa GUI wrapper around AppleScript."];
 	
-	$code_model['perfect-pitch-trainer'] = ['title' => 'Perfect Pitch Trainer', 'link' => CODE_URL.'perfect-pitch-trainer/', 'release_date' => '12/20/2014', 'icon_url' => 'perfect-pitch-trainer-icon.png', 
+	$code_model['perfect-pitch-trainer'] = ['title' => 'Perfect Pitch Trainer', 'link' => 'https://github.com/allen-garvey/perfect-pitch-trainer', 'release_date' => '12/20/2014', 'icon_url' => 'perfect-pitch-trainer-icon.png', 
 					'blurb' => "In music school, I was interested in perfect pitch training, or learning to identify notes without a reference point. This web app(created using JavaScript and Angular) would have been helpful at that time. I also used Apache Cordova to create native iOS and Android versions of the app."];
 	
 	// $code_model[] = ['title' => 'Shape Calculator', 'link' => CODE_URL.'shape_calculator/', 'release_date' => '09/28/2014', 'icon_url' => '', 'blurb' => ""];
