@@ -13,7 +13,7 @@ function code_model(){
 	$code_model['annuncified'] = ['title' => 'Annuncified', 'link' => 'https://github.com/allen-garvey/annuncified', 'release_date' => '05/19/2015', 'icon_url' => 'annuncified-icon.png', 
 					'blurb' => "A native Android app that allows you to set ringtones per group and custom notification sounds per contact or group. Additionally, it can automatically silence calls and texts from non-contacts."];
 	
-	$code_model['android-inflater'] = ['title' => 'Android Inflater', 'link' => CODE_URL.'android-inflater/', 'release_date' => '02/10/2015', 'icon_url' => 'android-inflater-icon.png', 
+	$code_model['android-inflater'] = ['title' => 'Android Inflater', 'link' => 'https://github.com/allen-garvey/android-inflater', 'release_date' => '02/10/2015', 'icon_url' => 'android-inflater-icon.png', 
 					'blurb' => "To increase productivity when accessing Android XML layout widgets in Java code, I wrote a Python script automate it for me. That evolved into a web app that uses JavaScript to parse the XML layout files and Bootstrap and Angular to display the results."];
 	
 	$code_model['font-check'] = ['title' => 'Font Check', 'link' => 'https://github.com/allen-garvey/font-check/', 'release_date' => '02/05/2015', 'icon_url' => 'font-check-icon.png', 
