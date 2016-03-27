@@ -376,7 +376,7 @@ a.back_link{
 	// background-color:$blue;
 }
 //used to differentiate links to github
-.code_link[href*="github"] h3:after{
+.code_link[href*="github.com"] h3:after{
 	content: "*";
 	position: relative;
 	font-size: 75%;
