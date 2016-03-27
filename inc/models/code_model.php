@@ -4,6 +4,9 @@
 function code_model(){
 	$code_model = [];
 	
+	$code_model['earscape'] = ['title' => 'Earscape', 'link' => 'https://allen-garvey.github.io/earscape/', 'release_date' => '08/22/2015', 'icon_url' => 'earscape-icon.png', 
+					'blurb' => "One of my interests is the intersection of music with technology (particularly algorithmic composition), so I created this web app to generate random twelve tone melodies, using the band.js and vex-tab libraries to playback the melodies and generate the sheet music."];
+
 	$code_model['wordpop'] = ['title' => 'Wordpop', 'link' => 'https://github.com/allen-garvey/wordpop-node', 'release_date' => '08/15/2015', 'icon_url' => 'wordpop-icon.png', 
 					'blurb' => "I wanted some practice in data visualization and creating infographics, so I created this web app using d3.js and node.js to dynamically display word frequencies in Craigslist listings in scatterplot and bar graph formats."];
 
@@ -13,7 +16,7 @@ function code_model(){
 	$code_model['annuncified'] = ['title' => 'Annuncified', 'link' => 'https://github.com/allen-garvey/annuncified', 'release_date' => '05/19/2015', 'icon_url' => 'annuncified-icon.png', 
 					'blurb' => "A native Android app that allows you to set ringtones per group and custom notification sounds per contact or group. Additionally, it can automatically silence calls and texts from non-contacts."];
 	
-	$code_model['android-inflater'] = ['title' => 'Android Inflater', 'link' => 'https://github.com/allen-garvey/android-inflater', 'release_date' => '02/10/2015', 'icon_url' => 'android-inflater-icon.png', 
+	$code_model['android-inflater'] = ['title' => 'Android Inflater', 'link' => 'https://allen-garvey.github.io/android-inflater/', 'release_date' => '02/10/2015', 'icon_url' => 'android-inflater-icon.png', 
 					'blurb' => "To increase productivity when accessing Android XML layout widgets in Java code, I wrote a Python script automate it for me. That evolved into a web app that uses JavaScript to parse the XML layout files and Bootstrap and Angular to display the results."];
 	
 	$code_model['font-check'] = ['title' => 'Font Check', 'link' => 'https://github.com/allen-garvey/font-check/', 'release_date' => '02/05/2015', 'icon_url' => 'font-check-icon.png', 
@@ -22,7 +25,7 @@ function code_model(){
 	// $code_model['ruby-launcher'] = ['title' => 'Ruby Launcher', 'link' => 'https://github.com/allen-garvey/ruby-launcher/', 'release_date' => '01/12/2015', 'icon_url' => 'ruby-launcher-icon.png', 
 	// 				'blurb' => "While learning Ruby, I wanted to easily launch my Ruby programs from the Finder. Similar to the Python Launcher, this native Mac app is a Swift/Cocoa GUI wrapper around AppleScript."];
 	
-	$code_model['perfect-pitch-trainer'] = ['title' => 'Perfect Pitch Trainer', 'link' => 'https://github.com/allen-garvey/perfect-pitch-trainer', 'release_date' => '12/20/2014', 'icon_url' => 'perfect-pitch-trainer-icon.png', 
+	$code_model['perfect-pitch-trainer'] = ['title' => 'Perfect Pitch Trainer', 'link' => 'https://allen-garvey.github.io/perfect-pitch-trainer/', 'release_date' => '12/20/2014', 'icon_url' => 'perfect-pitch-trainer-icon.png', 
 					'blurb' => "In music school, I was interested in perfect pitch training, or learning to identify notes without a reference point. This web app(created using JavaScript and Angular) would have been helpful at that time. I also used Apache Cordova to create native iOS and Android versions of the app."];
 	
 	// $code_model[] = ['title' => 'Shape Calculator', 'link' => CODE_URL.'shape_calculator/', 'release_date' => '09/28/2014', 'icon_url' => '', 'blurb' => ""];
